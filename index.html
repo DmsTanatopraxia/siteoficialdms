@@ -632,386 +632,90 @@ footer p{font-size:0.8rem;color:var(--gray);}
 
 <script>
 const MODULES = [
-  // ── MÓDULO 1 ──────────────────────────────
-  {
-    num:'01', title:'História e Evolução da Tanatopraxia',
-    desc:'Das civilizações antigas ao século XXI. Egito, Guerra Civil Americana, Dr. Thomas Holmes e a chegada ao Brasil.',
-    hours:'8h', questions:[
-      {q:'Qual civilização é considerada pioneira nas técnicas de preservação de corpos humanos?',
-       opts:['Mesopotâmia','Grécia Antiga','Egito Antigo','Roma Imperial'],ans:2,
-       exp:'Os egípcios praticavam a mumificação há mais de 5.000 anos, utilizando o natrão como primeiro agente de conservação da história.'},
-      {q:'O processo de mumificação egípcia utilizava principalmente qual substância como agente conservador?',
-       opts:['Formaldeído','Natrão','Álcool etílico','Glicerina'],ans:1,
-       exp:'O natrão é um carbonato de sódio natural usado pelos egípcios para desidratar e conservar os corpos no processo de mumificação.'},
-      {q:'A tanatopraxia moderna teve sua origem em qual conflito histórico?',
-       opts:['Primeira Guerra Mundial','Segunda Guerra Mundial','Guerra Civil Americana','Guerra das Malvinas'],ans:2,
-       exp:'A tanatopraxia moderna surgiu durante a Guerra Civil Americana (1861–1865), quando havia necessidade de transportar corpos de soldados de volta às famílias.'},
-      {q:'Quem é considerado o "pai do embalsamamento moderno" nos Estados Unidos?',
-       opts:['Dr. Abraham Lincoln','Dr. Thomas Holmes','Dr. Harvey Cushing','Dr. William Osler'],ans:1,
-       exp:'O Dr. Thomas Holmes desenvolveu e aplicou técnicas de embalsamamento arterial em mais de 4.000 soldados durante a Guerra Civil Americana, sendo considerado o pai do embalsamamento moderno.'},
-      {q:'Quantos soldados o Dr. Thomas Holmes embalsamou durante a Guerra Civil Americana?',
-       opts:['Mais de 1.000','Mais de 2.000','Mais de 4.000','Mais de 10.000'],ans:2,
-       exp:'O Dr. Thomas Holmes embalsamou mais de 4.000 soldados, permitindo que seus corpos fossem transportados de volta às famílias em todo o país.'},
-      {q:'A palavra "Tanatopraxia" tem origem no grego. O prefixo "Tanato" significa:',
-       opts:['Corpo','Morte','Conservação','Preparação'],ans:1,
-       exp:'O prefixo "Tanato" vem do grego "Thanatos", que significa morte. "Práxia" vem de "praxis", que significa prática ou ação — tanatopraxia: prática relacionada à morte.'},
-      {q:'Qual foi um dos principais objetivos do embalsamamento de soldados na Guerra Civil Americana?',
-       opts:['Fins científicos e pesquisas médicas','Rituais religiosos militares','Transporte dos corpos de volta às famílias','Exposição pública em memoriais'],ans:2,
-       exp:'O principal objetivo era permitir o transporte dos corpos dos soldados mortos de volta às suas famílias, que muitas vezes estavam em estados distantes do campo de batalha.'},
-      {q:'Qual substância química passou a ser amplamente usada no embalsamamento moderno após a Guerra Civil Americana?',
-       opts:['Natrão','Ácido acético','Formaldeído (formol)','Álcool isopropílico'],ans:2,
-       exp:'O formaldeído (formol), descoberto na segunda metade do século XIX, tornou-se o principal agente conservador do embalsamamento moderno, substituindo técnicas anteriores menos eficazes.'},
-      {q:'No contexto histórico da tanatopraxia, qual característica diferencia a prática moderna das antigas técnicas de mumificação?',
-       opts:['O uso de componentes vegetais','A preservação através de injeção arterial e conservação química','A remoção completa dos órgãos internos','O uso exclusivo de métodos físicos de conservação'],ans:1,
-       exp:'A tanatopraxia moderna se diferencia pelo uso da injeção arterial de fluidos conservadores, mantendo os órgãos no interior do corpo e preservando a aparência natural do falecido.'},
-      {q:'Qual é a principal finalidade da tanatopraxia no contexto contemporâneo?',
-       opts:['Estudar as causas da morte para fins forenses','Preservar o corpo para fins religiosos exclusivamente','Preservar o corpo com dignidade para o velório e transporte, respeitando família e normas sanitárias','Realizar autópsias e perícias judiciais'],ans:2,
-       exp:'A tanatopraxia contemporânea tem como finalidade principal preservar o corpo com dignidade e segurança sanitária, garantindo uma apresentação respeitosa para a família durante o velório e viabilizando transportes.'},
-    ]
-  },
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Tanatopraxia - Sistema de Simulados</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #16a085;
+            --success: #27ae60;
+            --danger: #c0392b;
+            --background: #f5f7fa;
+            --text: #34495e;
+        }
 
-  // ── MÓDULO 2 ──────────────────────────────
-  {
-    num:'02', title:'Anatomia e Fisiologia Aplicada',
-    desc:'Sistema circulatório, topografia vascular, pontos de referência para dissecação cervical, inguinal e axilar.',
-    hours:'10h', questions:[
-      {q:'Qual artéria é a principal via de acesso para a dissecação cervical no embalsamamento?',
-       opts:['Artéria femoral','Artéria axilar','Artéria carótida comum','Artéria subclávia'],ans:2,
-       exp:'A artéria carótida comum é a principal via de acesso na dissecação cervical, sendo o ponto mais utilizado no embalsamamento pela facilidade de localização e tamanho do vaso.'},
-      {q:'O ponto de referência para a dissecação inguinal no embalsamamento multipontual é localizado em qual região?',
-       opts:['Fossa poplítea','Região femoral / inguinal','Fossa cubital','Região axilar'],ans:1,
-       exp:'A dissecação inguinal utiliza a artéria e veia femorais, localizadas na região inguinal (virilha), sendo o ponto de acesso para embalsamamento dos membros inferiores.'},
-      {q:'Qual veia é a principal via de drenagem sanguínea durante o embalsamamento arterial pela via cervical?',
-       opts:['Veia subclávia','Veia safena','Veia jugular interna','Veia femoral'],ans:2,
-       exp:'A veia jugular interna é a principal via de drenagem durante o embalsamamento pela via cervical, localizada paralelamente à artéria carótida comum.'},
-      {q:'O sistema circulatório é a base do embalsamamento arterial. Durante a injeção, o fluido conservador percorre:',
-       opts:['Apenas os vasos capilares superficiais','O mesmo trajeto do sangue pelo sistema vascular','Somente as veias de maior calibre','Apenas as artérias da face e pescoço'],ans:1,
-       exp:'O fluido conservador arterial percorre o mesmo trajeto que o sangue percorreria pelo sistema vascular, distribuindo-se por todo o organismo pelos vasos arteriais.'},
-      {q:'Na topografia vascular, qual é o acesso axilar utilizado no embalsamamento e para qual região do corpo ele é indicado?',
-       opts:['Veia jugular — para a cabeça','Artéria axilar/braquial — para os membros superiores','Artéria ilíaca — para o tronco','Veia basílica — para o tórax'],ans:1,
-       exp:'A artéria axilar ou braquial, acessada pela região axilar, é utilizada para embalsamamento dos membros superiores em casos de dificuldade de distribuição pelos pontos principais.'},
-      {q:'Qual estrutura anatômica serve como referência para localização da artéria carótida comum na dissecação cervical?',
-       opts:['Músculo trapézio','Músculo esternocleidomastóideo','Músculo deltóide','Músculo peitoral maior'],ans:1,
-       exp:'O músculo esternocleidomastóideo (ECM) é a principal referência anatômica para localização e dissecação da artéria carótida comum na região cervical.'},
-      {q:'Para o embalsamamento, é fundamental conhecer a diferença entre artérias e veias. Qual das afirmações está correta?',
-       opts:['Artérias transportam sangue venoso ao pulmão','Veias transportam sangue do coração aos órgãos','Artérias transportam sangue do coração aos tecidos; veias retornam o sangue ao coração','Artérias e veias têm a mesma função no embalsamamento'],ans:2,
-       exp:'Artérias conduzem sangue do coração para os tecidos (via de injeção do fluido) e as veias retornam o sangue ao coração (via de drenagem durante o embalsamamento).'},
-      {q:'Qual é o papel do coração no processo de embalsamamento arterial, mesmo após o óbito?',
-       opts:['O coração não tem papel algum após o óbito','Funciona como ponto central para a distribuição do fluido pelo sistema vascular','É sempre removido antes do embalsamamento','Serve apenas como referência anatômica visual'],ans:1,
-       exp:'O coração funciona como ponto central do sistema vascular. Mesmo após o óbito, a estrutura vascular permanece e o fluido injetado percorre esse sistema, tornando o coração o centro da distribuição.'},
-      {q:'Qual cavidade corporal contém os principais vasos sanguíneos de grande calibre, como a aorta?',
-       opts:['Cavidade pélvica','Cavidade craniana','Cavidade torácica','Cavidade abdominal'],ans:2,
-       exp:'A cavidade torácica contém os principais vasos de grande calibre, incluindo a aorta, a artéria pulmonar e as grandes veias, sendo a região de maior relevância circulatória.'},
-      {q:'Na dissecação cervical para embalsamamento, qual incisão é comumente utilizada para acesso à carótida?',
-       opts:['Incisão horizontal supraesternal','Incisão lateral cervical esquerda paralelamente ao músculo ECM','Incisão mediana na região submentoniana','Incisão posterior na nuca'],ans:1,
-       exp:'A incisão lateral cervical esquerda, realizada paralelamente ao músculo esternocleidomastóideo, é a via de acesso padrão para localização e canulação da artéria carótida comum.'},
-    ]
-  },
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--background); color: var(--text); padding: 20px; display: flex; justify-content: center; }
+        .container { max-width: 800px; width: 100%; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        
+        h1, h2, h3 { color: var(--primary); margin-bottom: 15px; }
+        .hidden { display: none !important; }
+        
+        /* Menu de Módulos */
+        .grid-modulos { display: grid; grid-template-columns: 1fr; gap: 15px; margin-top: 20px; }
+        .card-modulo { border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
+        .card-modulo:hover { border-color: var(--secondary); background-color: #fafbfc; transform: translateY(-2px); }
+        .badge { background: var(--secondary); color: white; padding: 3px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
 
-  // ── MÓDULO 3 ──────────────────────────────
-  {
-    num:'03', title:'Fenômenos Cadavéricos e Alterações Post-Mortem',
-    desc:'Algor Mortis, Livor Mortis, Rigor Mortis, cronotanatognose, estágios de decomposição e entomologia forense.',
-    hours:'8h', questions:[
-      {q:'Qual fenômeno cadavérico descreve o resfriamento progressivo do corpo após o óbito?',
-       opts:['Livor Mortis','Rigor Mortis','Algor Mortis','Putrefação'],ans:2,
-       exp:'Algor Mortis é o resfriamento corporal pós-morte. O corpo perde aproximadamente 1°C por hora em condições ambientais normais, sendo um parâmetro utilizado na cronotanatognose.'},
-      {q:'Os livores cadavéricos (Livor Mortis) surgem no corpo devido a:',
-       opts:['Contração muscular pós-morte','Acúmulo de sangue por ação da gravidade nas regiões mais baixas','Produção de gases intestinais','Desidratação progressiva dos tecidos'],ans:1,
-       exp:'O Livor Mortis resulta do acúmulo de sangue por ação gravitacional nas regiões mais baixas do corpo após a cessação da circulação, formando manchas arroxeadas.'},
-      {q:'O Rigor Mortis (rigidez cadavérica) atinge seu grau máximo aproximadamente:',
-       opts:['2 horas após o óbito','6 horas após o óbito','12 horas após o óbito','48 horas após o óbito'],ans:2,
-       exp:'O rigor mortis inicia entre 2 e 6 horas após o óbito, atinge seu máximo em torno de 12 horas e começa a se resolver entre 24 e 72 horas, variando conforme temperatura e condições do corpo.'},
-      {q:'O termo "Cronotanatognose" refere-se a:',
-       opts:['Estudo das causas da morte','Estimativa do tempo de morte com base nos fenômenos cadavéricos','Processo de embalsamamento em corpos decompostos','Análise química dos fluidos conservadores'],ans:1,
-       exp:'Cronotanatognose é a estimativa do tempo decorrido desde o óbito, realizada pela análise dos fenômenos cadavéricos como algor, livor, rigor mortis e estágio de decomposição.'},
-      {q:'Qual é a "janela de ouro" para início do embalsamamento com melhores resultados?',
-       opts:['Nas primeiras 24 horas','Nas primeiras 12 horas','Nas primeiras 6 horas','Nas primeiras 2 horas'],ans:2,
-       exp:'O embalsamamento deve ser iniciado idealmente nas primeiras 6 horas após o óbito, antes da instalação completa do rigor mortis, o que facilita a distribuição do fluido pelo sistema vascular.'},
-      {q:'A entomologia forense estuda insetos relacionados ao corpo em decomposição. Qual sua principal utilidade prática?',
-       opts:['Identificar doenças que o falecido tinha','Auxiliar na estimativa do tempo de morte','Determinar a causa jurídica do óbito','Calcular o volume de fluido necessário para embalsamamento'],ans:1,
-       exp:'A entomologia forense analisa a colonização de insetos (especialmente moscas e besouros) no corpo em decomposição para estimar o tempo de morte, sendo especialmente útil em casos de cadáveres em estado avançado.'},
-      {q:'Em qual ordem cronológica correta ocorrem os principais fenômenos cadavéricos imediatos?',
-       opts:['Rigor → Livor → Algor','Algor → Livor → Rigor','Livor → Algor → Rigor','Algor → Rigor → Livor'],ans:1,
-       exp:'O Algor Mortis (resfriamento) inicia imediatamente após o óbito, seguido pelo Livor Mortis (livores) nas primeiras 1-2 horas, e depois o Rigor Mortis (rigidez) a partir de 2-6 horas.'},
-      {q:'Os livores cadavéricos fixos (não desaparecem à pressão) indicam que o óbito ocorreu há:',
-       opts:['Menos de 2 horas','Entre 2 e 6 horas','8 a 12 horas ou mais','Menos de 1 hora'],ans:2,
-       exp:'Os livores cadavéricos tornam-se fixos (não se desfazem à pressão digital) geralmente após 8 a 12 horas do óbito, sendo relevante para a cronotanatognose e para decisões de posicionamento do corpo.'},
-      {q:'Qual fator ambiental acelera significativamente a decomposição cadavérica?',
-       opts:['Baixa temperatura e seco','Alta temperatura e umidade','Altitude elevada','Pressão atmosférica reduzida'],ans:1,
-       exp:'Alta temperatura combinada com umidade elevada acelera drasticamente a decomposição, pois favorece a proliferação bacteriana e a atividade enzimática responsáveis pelo processo.'},
-      {q:'A "saponificação" é um fenômeno cadavérico conservador que ocorre principalmente em:',
-       opts:['Corpos em ambientes secos e quentes','Corpos soterrados em areia','Corpos em ambientes úmidos ou submersos em água','Corpos expostos ao sol por longos períodos'],ans:2,
-       exp:'A saponificação (adipocera) ocorre quando a gordura corporal se transforma em uma substância cerosa em ambientes úmidos ou em corpos submersos, funcionando como mecanismo de conservação natural.'},
-    ]
-  },
+        /* Área do Quiz */
+        .progresso { height: 6px; background: #e2e8f0; border-radius: 3px; margin: 20px 0; overflow: hidden; }
+        .barra { height: 100%; background: var(--secondary); width: 0%; transition: width 0.3s; }
+        .opcao { display: block; width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #cbd5e1; border-radius: 6px; text-align: left; background: white; cursor: pointer; font-size: 16px; transition: background 0.2s; }
+        .opcao:hover { background: #f8fafc; border-color: #94a3b8; }
+        .opcao.correta { background: #d4edda !important; border-color: var(--success); color: #155724; font-weight: bold; }
+        .opcao.errada { background: #f8d7da !important; border-color: var(--danger); color: #721c24; }
+        
+        .explicacao { background: #eef2f7; padding: 15px; border-left: 4px solid var(--secondary); border-radius: 4px; margin-top: 15px; line-height: 1.5; }
+        
+        /* Botões de Ação */
+        .botoes-container { display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap; }
+        .btn { flex: 1; min-width: 150px; padding: 12px 20px; border: none; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; text-align: center; transition: background 0.2s; }
+        .btn-primary { background: var(--secondary); color: white; }
+        .btn-primary:hover { background: #117a65; }
+        .btn-outline { background: transparent; border: 2px solid var(--primary); color: var(--primary); }
+        .btn-outline:hover { background: var(--primary); color: white; }
+        .btn-success { background: var(--success); color: white; }
+        .btn-success:hover { background: #1e7e34; }
+        
+        /* Tela de Resultados */
+        .resultado-box { text-align: center; padding: 30px 0; }
+        .score { font-size: 48px; font-weight: bold; color: var(--secondary); margin: 20px 0; }
+    </style>
+</head>
+<body>
 
-  // ── MÓDULO 4 ──────────────────────────────
-  {
-    num:'04', title:'Química de Conservação e Farmacologia Funerária',
-    desc:'Formaldeído, fluidos arteriais e cavitários, cálculos de diluição e impacto de medicamentos pré-morte.',
-    hours:'8h', questions:[
-      {q:'O principal agente conservador utilizado no embalsamamento arterial moderno é:',
-       opts:['Álcool etílico','Glutaraldeído','Formaldeído (formol)','Hipoclorito de sódio'],ans:2,
-       exp:'O formaldeído (formol) é o principal agente conservador do embalsamamento moderno. Age inibindo bactérias e fixando as proteínas dos tecidos, retardando eficazmente a decomposição.'},
-      {q:'O "índice" de um fluido arterial refere-se a:',
-       opts:['Ao volume total da solução preparada','À concentração de formaldeído ativo no fluido','Ao pH da solução conservadora','Ao tempo de ação do produto'],ans:1,
-       exp:'O índice é a unidade que expressa a concentração de formaldeído ativo no fluido arterial. Um fluido de índice 25 contém 25% de formaldeído ativo, sendo o parâmetro principal para preparo da solução.'},
-      {q:'Qual é a função específica do fluido pré-injeção?',
-       opts:['Substituir diretamente o sangue pelos tecidos','Preparar o sistema vascular e fluidificar o sangue antes do fluido arterial principal','Aspirar o conteúdo das cavidades','Tratar hematomas e descolorações externas'],ans:1,
-       exp:'O fluido pré-injeção é injetado antes do fluido arterial principal para preparar o sistema vascular, fluidificar o sangue coagulado, melhorar a circulação e garantir melhor distribuição do conservante.'},
-      {q:'Os fluidos de cavidade possuem concentração de formaldeído:',
-       opts:['Menor que os fluidos arteriais','Igual aos fluidos arteriais','Maior que os fluidos arteriais','Não contêm formaldeído'],ans:2,
-       exp:'Os fluidos de cavidade possuem concentração de formaldeído significativamente maior que os arteriais, pois precisam conservar diretamente os órgãos e conteúdos das cavidades corporais.'},
-      {q:'O uso prolongado de quimioterapia pelo falecido pode impactar o embalsamamento da seguinte forma:',
-       opts:['Facilita o embalsamamento por matar bactérias','Retarda a decomposição naturalmente','Pode comprometer a distribuição do fluido e alterar a textura dos tecidos','Aumenta a resistência vascular e melhora os resultados'],ans:2,
-       exp:'Medicamentos quimioterápicos e outros fármacos tomados pré-morte podem comprometer o sistema vascular, alterar a textura tecidual e a resposta ao formaldeído, exigindo ajustes na técnica de embalsamamento.'},
-      {q:'Qual cálculo é utilizado para determinar a quantidade de fluido arterial concentrado a ser diluído para o embalsamamento?',
-       opts:['Volume total = altura × constante','Onças de fluido concentrado por kg de peso corporal','Litros totais = índice ÷ peso','Volume fixo de 4 litros para qualquer corpo'],ans:1,
-       exp:'A regra prática é utilizar aproximadamente 1 onça (30ml) de fluido concentrado por kg de peso corporal, ajustando a diluição conforme o índice do produto e as condições do caso.'},
-      {q:'O formaldeído é classificado pela IARC (Agência Internacional de Pesquisa sobre o Câncer) como:',
-       opts:['Substância inerte sem riscos comprovados','Carcinogênico do Grupo 1 (comprovadamente carcinogênico para humanos)','Substância de baixo risco ocupacional','Irritante leve sem riscos a longo prazo'],ans:1,
-       exp:'O formaldeído é classificado pela IARC como carcinogênico do Grupo 1, com evidências comprovadas de causar câncer em humanos, especialmente nas vias aéreas superiores, exigindo rigoroso controle de exposição.'},
-      {q:'Em casos de corpos com icterícia (coloração amarelada), qual adaptação técnica pode ser necessária?',
-       opts:['Usar fluido de índice muito baixo','Usar fluidos específicos para controle de descoloração e co-injeção de branqueadores','Não realizar embalsamamento em casos de icterícia','Aumentar a temperatura do fluido para maior penetração'],ans:1,
-       exp:'A icterícia causa coloração amarelada intensa dos tecidos. São utilizados fluidos especiais com agentes de controle de descoloração e co-injeção de produtos branqueadores para neutralizar o pigmento.'},
-      {q:'O fluido co-injeção é adicionado à solução arterial com qual objetivo principal?',
-       opts:['Aumentar a concentração de formaldeído','Reduzir o pH da solução','Melhorar a penetração e distribuição do fluido, reduzindo coagulação','Substituir completamente o fluido pré-injeção'],ans:2,
-       exp:'O fluido co-injeção é um aditivo que melhora a penetração do fluido arterial nos tecidos, reduz a coagulação sanguínea e potencializa a distribuição uniforme do conservante por todo o organismo.'},
-      {q:'Corpos com edema generalizado (acúmulo de líquido nos tecidos) requerem qual adaptação no embalsamamento?',
-       opts:['Injeção de fluido em alta pressão apenas','Uso de fluidos de desumedecimento e aumento do índice do fluido arterial','Apenas aspiração de cavidades sem injeção arterial','Redução da quantidade de fluido injetado'],ans:1,
-       exp:'O edema generalizado exige o uso de fluidos com propriedades de desumedecimento (desidratação tecidual) e geralmente o aumento do índice do fluido arterial para garantir a conservação adequada dos tecidos saturados de líquido.'},
-    ]
-  },
+<div class="container">
+    <div id="tela-modulos">
+        <h1>Curso de Tanatopraxia</h1>
+        <p>Selecione um módulo para iniciar o simulado:</p>
+        <div class="grid-modulos" id="lista-modulos"></div>
+    </div>
 
-  // ── MÓDULO 5 ──────────────────────────────
-  {
-    num:'05', title:'Protocolos Avançados de Injeção e Drenagem',
-    desc:'Injeção unipontual, multipontual (Six-Point), drenagem alternada, corpos necropsiados, edema, icterícia e queimaduras.',
-    hours:'12h', questions:[
-      {q:'A técnica de injeção "unipontual" consiste em:',
-       opts:['Injeção em seis pontos simultâneos do corpo','Injeção a partir de um único ponto de acesso (geralmente a carótida), distribuindo o fluido por todo o corpo','Injeção diretamente nas cavidades corporais','Injeção exclusivamente na aorta por via abdominal'],ans:1,
-       exp:'A técnica unipontual utiliza um único ponto de acesso (geralmente a artéria carótida) para injetar o fluido, que se distribui pelo sistema vascular de forma centralizada para todo o corpo.'},
-      {q:'A técnica "Six-Point" (multipontual) é indicada principalmente em:',
-       opts:['Todos os corpos, independente das condições','Corpos com dificuldade de distribuição a partir de um único ponto: obesos, edemaciados, necropsiados ou com calcificações vasculares','Apenas em corpos pediátricos','Casos de decomposição avançada exclusivamente'],ans:1,
-       exp:'A técnica Six-Point (seis pontos) é indicada quando a distribuição unipontual não é eficiente, como em obesos, corpos edemaciados, necropsiados ou com vasculatura comprometida, garantindo cobertura de todas as regiões.'},
-      {q:'Em corpos que passaram por necropsia (autopsia), o principal desafio no embalsamamento é:',
-       opts:['A rigidez muscular excessiva','A ausência de referências anatômicas para embalsamamento','O sistema vascular interrompido e a necessidade de sutura das cavidades abertas antes e após o embalsamamento','O excesso de fluidos biológicos nos tecidos'],ans:2,
-       exp:'Em corpos necropsiados, os grandes vasos foram seccionados e as cavidades abertas, exigindo técnicas adaptadas: embalsamamento multipontual, sutura das cavidades, injeção cavitária complementar e uso de gases conservadores.'},
-      {q:'A drenagem "alternada" durante o embalsamamento consiste em:',
-       opts:['Drenar todo o sangue antes de iniciar qualquer injeção','Alternar momentos de injeção com momentos de drenagem para evitar sobre-pressão e melhorar a distribuição','Drenar apenas as cavidades sem drenagem vascular','Utilizar apenas gravidade para drenagem, sem pressão ativa'],ans:1,
-       exp:'A drenagem alternada é a técnica onde se alterna injeção de fluido com drenagem venosa em ciclos, evitando a sobre-pressão nos vasos e permitindo melhor penetração e distribuição do fluido conservador.'},
-      {q:'Em casos de queimaduras extensas, qual é o principal desafio para o embalsamamento?',
-       opts:['Excesso de rigidez muscular','Destruição da pele e comprometimento da vasculatura, exigindo técnicas especiais de embalsamamento e reconstrução','Aceleração da putrefação interna apenas','Impossibilidade total de embalsamamento em qualquer caso'],ans:1,
-       exp:'Queimaduras destroem a pele (barreira protetora), comprometem vasos sanguíneos e tecidos, exigindo fluidos de alta concentração, técnicas multipontuais e cuidados especiais de vedação e reconstrução superficial.'},
-      {q:'Qual pressão de trabalho é recomendada na bomba de embalsamamento para a injeção arterial padrão?',
-       opts:['5 a 10 PSI','20 a 40 PSI','50 a 80 PSI','100 a 120 PSI'],ans:1,
-       exp:'A pressão de 20 a 40 PSI é a recomendada para injeção arterial padrão. Pressão muito baixa compromete a distribuição; muito alta pode causar extravasamento tecidual e danos vasculares.'},
-      {q:'Em corpos com edema generalizado, além dos fluidos especiais, qual técnica complementar pode ser necessária?',
-       opts:['Apenas aumento da pressão de injeção','Redução radical do volume injetado','Incisões de alívio na pele para drenagem do líquido intersticial excedente','Uso exclusivo de fluidos de cavidade sem arterial'],ans:2,
-       exp:'Em casos de edema severo, incisões de alívio (pequenas incisões estratégicas) podem ser necessárias para drenar o excesso de líquido intersticial, permitindo melhor penetração do fluido e redução do volume tecidual.'},
-      {q:'Qual é a diferença fundamental entre a injeção arterial e a injeção cavitária?',
-       opts:['Não há diferença, são procedimentos idênticos','A arterial distribui fluido pelo sistema vascular; a cavitária injeta fluido diretamente nos órgãos e cavidades via trocarte','A cavitária usa menor concentração de formaldeído que a arterial','A arterial é opcional; a cavitária é o procedimento principal'],ans:1,
-       exp:'A injeção arterial distribui o fluido pelo sistema circulatório para conservar tecidos; a injeção cavitária utiliza o trocarte para injetar fluido de alta concentração diretamente nas cavidades e órgãos após aspiração.'},
-      {q:'Em casos de icterícia, o fluido arterial padrão pode:',
-       opts:['Eliminar completamente a coloração amarelada em um único procedimento','Agravar a coloração amarelada dos tecidos se não forem usados produtos específicos','Não ter nenhum efeito sobre a coloração','Converter a coloração amarelada em tonalidade rosada de forma natural'],ans:1,
-       exp:'O formaldeído em alta concentração pode potencializar a fixação do pigmento biliar nos tecidos, agravando a coloração ictérica. São necessários fluidos com agentes de controle de descoloração e co-injeção adequada.'},
-      {q:'Após a injeção arterial, qual é o procedimento seguinte na sequência padrão de embalsamamento?',
-       opts:['Aplicação da maquiagem final','Vestimenta e preparação para o caixão','Aspiração das cavidades e injeção de fluido cavitário','Sutura da incisão e envio imediato ao velório'],ans:2,
-       exp:'Após a injeção arterial completa, o próximo passo é a aspiração das cavidades (torácica, abdominal e pélvica) com o trocarte, seguida pela injeção do fluido cavitário de alta concentração nas regiões aspiradas.'},
-    ]
-  },
+    <div id="tela-quiz" class="hidden">
+        <h3 id="quiz-modulo-titulo">Módulo X</h3>
+        <div class="progresso"><div class="barra" id="barra-progresso"></div></div>
+        
+        <div id="container-pergunta">
+            <h2 id="texto-pergunta">Texto da Pergunta</h2>
+            <div id="lista-opcoes"></div>
+            <div id="box-explicacao" class="explicacao hidden"></div>
+        </div>
 
-  // ── MÓDULO 6 ──────────────────────────────
-  {
-    num:'06', title:'Tanatoestética e Reconstituição Facial',
-    desc:'Colorimetria, necromaquiagem, modelagem com ceras restauradoras, suturas, restauração de olhos, boca, cabelos e mãos.',
-    hours:'10h', questions:[
-      {q:'A colorimetria aplicada à tanatoestética utiliza cores complementares para neutralizar descolorações. Para neutralizar hematomas arroxeados, qual cor é utilizada?',
-       opts:['Azul','Verde','Salmon ou laranja','Amarelo'],ans:2,
-       exp:'O salmon (rosa-alaranjado) e o laranja são as cores complementares ao roxo/azul na roda de cores, sendo usados em corretivos para neutralizar hematomas antes da aplicação da base.'},
-      {q:'As ceras restauradoras utilizadas na tanatopraxia têm como principal função:',
-       opts:['Perfumar o corpo para o velório','Preencher e reconstituir áreas com perda tecidual, lacerações e defeitos na superfície cutânea','Fixar a maquiagem por mais tempo','Hidratar a pele ressecada pós-morte'],ans:1,
-       exp:'As ceras restauradoras (ceras de modelagem funerária) são materiais maleáveis utilizados para preencher lacerações, perdas teciduais, reconstruir estruturas faciais e criar superfícies uniformes para a maquiagem.'},
-      {q:'Qual técnica é utilizada para manter os olhos fechados adequadamente durante e após o embalsamamento?',
-       opts:['Costura das pálpebras com fio de sutura visível','Uso de posicionadores oculares (eye caps) ou algodão sob as pálpebras','Apenas a pressão natural do corpo em decúbito','Cola industrial aplicada nas pálpebras'],ans:1,
-       exp:'Os posicionadores oculares (eye caps) são dispositivos plásticos texturizados colocados sob as pálpebras para mantê-las fechadas de forma natural. Algodão umedecido também pode ser utilizado como alternativa.'},
-      {q:'Na restauração da boca, qual dispositivo é utilizado para manter a mandíbula fechada com posição natural?',
-       opts:['Atadura elástica externa','Fio de sutura intrabucal (sutura mandibular) ou dispositivo mandibular','Cola de silicone aplicada entre os lábios','Prótese dentária de emergência'],ans:1,
-       exp:'A sutura mandibular (fio passado internamente pelo palato e gengiva) ou dispositivos mandibulares específicos mantêm a boca fechada em posição natural, sendo fundamental para a apresentação estética final.'},
-      {q:'Qual característica da pele pós-morte torna necessária a utilização de bases cremosas específicas para necromaquiagem?',
-       opts:['A pele fica mais oleosa após o óbito','A alteração do pH e o ressecamento progressivo comprometem a aderência de cosméticos convencionais','A pele escurece uniformemente e não precisa de correção','A pele pós-morte rejeita produtos com pigmento'],ans:1,
-       exp:'Após o óbito, a pele sofre alterações de pH e ressecamento progressivo, o que compromete a aderência de cosméticos comuns. Bases cremosas de alta cobertura específicas para uso funerário são necessárias.'},
-      {q:'Na reconstituição facial de casos traumáticos com perda óssea, qual material é utilizado para reconstruir a estrutura?',
-       opts:['Gesso cirúrgico','Prótese de silicone permanente','Ceras de alta fusão e materiais de suporte (redes, algodão estruturado)','Argila modelável convencional'],ans:2,
-       exp:'Em perdas ósseas e teciduais extensas, utilizam-se ceras de alta fusão combinadas com materiais de suporte como redes metálicas finas e algodão estruturado para reconstituir a forma anatômica antes da cobertura cosmética.'},
-      {q:'O que é a "necromaquiagem" no contexto da tanatopraxia?',
-       opts:['A maquiagem gótica usada em rituais culturais','O conjunto de técnicas cosméticas aplicadas ao falecido para uma apresentação digna e naturalista no velório','O processo de remoção da maquiagem do falecido antes dos procedimentos','A maquiagem aplicada durante a autópsia'],ans:1,
-       exp:'Necromaquiagem é o conjunto de técnicas profissionais de cosmetologia aplicadas ao falecido — incluindo base, corretivo, blush, batom, cabelo e fixação — para uma apresentação digna e o mais natural possível.'},
-      {q:'Qual cuidado é essencial ao escolher a tonalidade da base para a necromaquiagem?',
-       opts:['Sempre usar tom mais claro que a cor natural da pele','Usar fotos recentes do falecido como referência para corresponder ao tom natural real','Aplicar sempre a base mais escura disponível','A tonalidade não importa, pois a iluminação do velório uniformiza a cor'],ans:1,
-       exp:'Fotografias recentes do falecido são essenciais como referência para selecionar a tonalidade correta da base, respeitando a aparência natural da pessoa em vida e atendendo à expectativa da família.'},
-      {q:'Na restauração de mãos, quais são os principais cuidados técnicos?',
-       opts:['Apenas limpeza das unhas e retirada de sujeiras','Hidratar com creme comum e usar luvas descartáveis','Higienização, hidratação com produtos específicos, cuidado com unhas, reconstituição de lesões e posicionamento natural dos dedos','As mãos não requerem nenhum procedimento estético especial'],ans:2,
-       exp:'As mãos ficam visíveis no velório e merecem cuidado completo: higienização, hidratação com produtos funerários, cuidado com unhas, reconstituição de lesões (equimoses, cateteres) e posicionamento natural para a apresentação.'},
-      {q:'Qual produto é utilizado para fixar e dar durabilidade à maquiagem durante o período do velório?',
-       opts:['Verniz (esmalte transparente)','Spray fixador próprio para necromaquiagem','Vaselina líquida aplicada por cima','Talco comum polvilhado em excesso'],ans:1,
-       exp:'Sprays fixadores específicos para necromaquiagem garantem a durabilidade dos cosméticos durante o período do velório, resistindo a variações de temperatura e umidade e mantendo a apresentação intacta.'},
-    ]
-  },
+        <div class="botoes-container">
+            <button id="btn-voltar-menu" class="btn btn-outline" onclick="irParaMenu()">Abandonar Quiz</button>
+            <button id="btn-proxima" class="btn btn-primary hidden" onclick="proximaQuestao()">Avançar</button>
+        </div>
+    </div>
 
-  // ── MÓDULO 7 ──────────────────────────────
-  {
-    num:'07', title:'Biossegurança, Gestão de Riscos e NR-32',
-    desc:'EPIs, EPCs, RSS (RDC 222/2018), PGRSS, controle de vetores, descarte de formaldeído e fenol.',
-    hours:'6h', questions:[
-      {q:'A NR-32 do Ministério do Trabalho regulamenta especificamente:',
-       opts:['Segurança em canteiros de obra','Segurança e saúde no trabalho em serviços de saúde, incluindo laboratórios de tanatopraxia','Uso de produtos químicos na indústria alimentícia','Transporte de produtos perigosos em rodovias'],ans:1,
-       exp:'A NR-32 regula a segurança e saúde no trabalho em serviços de saúde, sendo diretamente aplicável a laboratórios de tanatopraxia, que são ambientes com exposição a riscos biológicos e químicos.'},
-      {q:'O PGRSS (Plano de Gerenciamento de Resíduos de Serviços de Saúde) em laboratórios de tanatopraxia tem como objetivo:',
-       opts:['Registrar apenas os procedimentos realizados em cada corpo','Planejar e controlar o descarte seguro e correto de todos os resíduos biológicos e químicos gerados','Controlar o estoque de EPIs dos colaboradores','Organizar a escala de trabalho da equipe'],ans:1,
-       exp:'O PGRSS é o documento que planeja e orienta o gerenciamento correto de todos os resíduos gerados — biológicos, químicos e perfurocortantes — garantindo descarte seguro conforme as normas sanitárias vigentes.'},
-      {q:'A RDC 222/2018 da ANVISA (RSS) classifica os resíduos de serviços de saúde em grupos. Os resíduos biológicos de laboratório de tanatopraxia se enquadram no:',
-       opts:['Grupo D (resíduos comuns)','Grupo B (resíduos químicos)','Grupo A (resíduos com risco biológico)','Grupo E (perfurocortantes)'],ans:2,
-       exp:'Os resíduos com potencial risco biológico (fluidos corporais, tecidos, materiais contaminados) são classificados no Grupo A pela RDC 222/2018, exigindo acondicionamento, coleta e descarte especializados.'},
-      {q:'Qual EPI é obrigatório especificamente para proteção respiratória contra formaldeído no laboratório de tanatopraxia?',
-       opts:['Máscara cirúrgica descartável (tripla camada)','Respirador com filtro para gases orgânicos ou máscara PFF2/PFF3','Protetor facial (face shield) sem máscara','Touca descartável com cobertura facial'],ans:1,
-       exp:'O formaldeído requer proteção respiratória com respiradores com filtros específicos para gases orgânicos ou máscaras PFF2/PFF3 no mínimo. Máscaras cirúrgicas simples não oferecem proteção adequada contra vapores químicos.'},
-      {q:'O descarte de soluções de formaldeído utilizadas no embalsamamento deve ser realizado:',
-       opts:['Na pia comum junto com água corrente','Em vaso sanitário sem diluição','Conforme o PGRSS da empresa, por empresa especializada em resíduos químicos perigosos','Em lixo comum após neutralização com água'],ans:2,
-       exp:'O formaldeído é classificado como resíduo químico perigoso (Grupo B). Seu descarte deve seguir rigorosamente o PGRSS, por meio de empresa licenciada para coleta e tratamento de resíduos químicos perigosos.'},
-      {q:'Os EPCs (Equipamentos de Proteção Coletiva) em laboratórios de tanatopraxia incluem:',
-       opts:['Apenas luvas e aventais individuais','Sistemas de exaustão e ventilação forçada, capelas, sistemas de drenagem fechados e iluminação de emergência','Apenas sinalização de segurança e extintores','Câmeras de monitoramento e alarmes de incêndio'],ans:1,
-       exp:'EPCs são medidas coletivas que protegem todos: sistemas de exaustão e ventilação forçada (para formaldeído), capelas de gases, sistemas de drenagem fechados e piso antiaderente são exemplos fundamentais em laboratórios de tanatopraxia.'},
-      {q:'O controle de vetores (insetos e roedores) em funerárias e laboratórios de tanatopraxia é importante principalmente para:',
-       opts:['Apenas para conforto visual e estético do ambiente','Evitar disseminação de doenças e contaminação cruzada entre os corpos e o ambiente de trabalho','Cumprir exigências apenas de empresas de grande porte','Reduzir o odor do formaldeído no ambiente'],ans:1,
-       exp:'Vetores como moscas, baratas e roedores são potenciais transmissores de patógenos e podem contaminar o ambiente, os corpos e representar risco biológico sério para a equipe. O controle é obrigação sanitária.'},
-      {q:'Qual vacina é especialmente importante para profissionais de tanatopraxia, considerando o risco de contato com sangue?',
-       opts:['Vacina contra febre amarela','Vacina contra Hepatite B','Vacina contra dengue','Vacina contra varicela'],ans:1,
-       exp:'A vacina contra Hepatite B é prioritária para profissionais que têm contato com sangue e fluidos corporais. O vírus HBV sobrevive fora do organismo por horas e representa alto risco de infecção ocupacional.'},
-      {q:'O formaldeído é classificado pela IARC como carcinogênico Grupo 1. Qual é o limite de exposição ocupacional (OSHA/ACGIH) recomendado?',
-       opts:['Ilimitado, pois é utilizado em ambiente controlado','0,1 ppm como teto (ceiling) e 0,75 ppm como TWA (média ponderada no tempo)','5 ppm sem necessidade de proteção adicional','10 ppm para exposição máxima diária'],ans:1,
-       exp:'O limite de exposição ao formaldeído é extremamente restrito: 0,75 ppm como TWA (8h/dia) e 1 ppm como STEL (curta duração), pela ACGIH. A OSHA define 0,75 ppm como padrão permissível de exposição.'},
-      {q:'Após o uso, as luvas de látex ou nitrilo devem ser descartadas:',
-       opts:['Somente quando apresentarem perfurações visíveis','No lixo comum após remoção cuidadosa','No coletor de resíduo infectante (Grupo A) após cada procedimento','Podem ser reutilizadas após lavagem com álcool 70°'],ans:2,
-       exp:'As luvas utilizadas no contato com corpos são resíduos com risco biológico (Grupo A) e devem ser descartadas após cada procedimento no coletor adequado (saco branco leitoso ou vermelho), nunca reutilizadas.'},
-    ]
-  },
-
-  // ── MÓDULO 8 ──────────────────────────────
-  {
-    num:'08', title:'Ética Profissional e Legislação Funerária',
-    desc:'Código Penal Art. 212, responsabilidade civil e criminal, sigilo profissional, LGPD e bioética.',
-    hours:'4h', questions:[
-      {q:'O Artigo 212 do Código Penal Brasileiro tipifica como crime:',
-       opts:['O exercício da tanatopraxia sem registro profissional','Vilipêndio a cadáver: destruir, subtrair, ocultar, mutilá-lo ou praticar ato de libidinagem','O embalsamamento sem autorização da família','O transporte de corpo sem guia de remoção'],ans:1,
-       exp:'O Art. 212 do CP tipifica o "vilipêndio a cadáver": destruir, subtrair, ocultar ou mutilar cadáver ou suas cinzas, bem como praticar ato de libidinagem, com pena de reclusão de 1 a 3 anos.'},
-      {q:'A LGPD (Lei Geral de Proteção de Dados) impacta o setor funerário principalmente em relação a:',
-       opts:['Uso de formaldeído acima dos limites permitidos','Coleta, armazenamento e uso de dados pessoais dos falecidos e de seus familiares','Regulamentação dos fluidos de embalsamamento','Transporte interestadual de corpos'],ans:1,
-       exp:'A LGPD (Lei 13.709/2018) regula o tratamento de dados pessoais. No setor funerário, aplica-se ao armazenamento de dados de falecidos e familiares em sistemas, exigindo consentimento, segurança e políticas claras de privacidade.'},
-      {q:'O sigilo profissional do tanatopraxista abrange:',
-       opts:['Apenas as técnicas de embalsamamento utilizadas','Todas as informações obtidas sobre o falecido e sua família durante o atendimento','Somente dados financeiros da família','Apenas os dados médicos do certificado de óbito'],ans:1,
-       exp:'O sigilo profissional é absoluto e abrange todas as informações obtidas durante o atendimento: causa da morte, condição do corpo, situações familiares, dados financeiros e qualquer outra informação confidencial.'},
-      {q:'A responsabilidade civil do profissional de tanatopraxia pode ser acionada em casos de:',
-       opts:['Apenas em casos de erros cirúrgicos graves','Danos causados à família por negligência, imprudência ou imperícia nos procedimentos realizados','Somente quando há perda total do corpo durante o transporte','Apenas em casos criminais com investigação policial'],ans:1,
-       exp:'A responsabilidade civil pode ser acionada por qualquer dano causado à família — como erro de identificação, dano à imagem do corpo, perda de pertences, atraso no serviço — decorrente de negligência, imprudência ou imperícia.'},
-      {q:'A bioética aplicada à tanatopraxia determina que o profissional deve:',
-       opts:['Priorizar a agilidade do procedimento acima de qualquer outra consideração','Tratar o corpo humano com a mesma dignidade e respeito dispensados a uma pessoa viva','Adaptar os procedimentos apenas às exigências comerciais da empresa','Ignorar preferências religiosas da família em prol da padronização técnica'],ans:1,
-       exp:'A bioética fundamenta toda a prática da tanatopraxia: o corpo humano deve ser tratado com absoluto respeito e dignidade, independente de condição, e os direitos da família precisam ser respeitados em todas as decisões.'},
-      {q:'Qual documento deve ser assinado pela família antes do procedimento de embalsamamento?',
-       opts:['Apenas a Nota Fiscal de Serviços','Termo de Autorização de Embalsamamento, formalizando o consentimento informado','Somente o contrato de prestação de serviços gerais','Não há necessidade de qualquer documentação específica'],ans:1,
-       exp:'O Termo de Autorização de Embalsamamento é obrigatório e formaliza o consentimento informado da família, especificando o procedimento a ser realizado. É documento legal que protege tanto a família quanto o profissional.'},
-      {q:'O princípio da "não-maleficência" na bioética funerária determina que:',
-       opts:['O profissional deve buscar sempre o melhor resultado comercial','O profissional deve abster-se de causar danos desnecessários ao corpo ou angústia adicional à família','O profissional pode utilizar qualquer técnica para obter o melhor resultado estético','A família não precisa ser informada sobre os procedimentos realizados'],ans:1,
-       exp:'A não-maleficência é um dos pilares da bioética: o profissional deve evitar causar qualquer dano desnecessário — ao corpo, à família ou a terceiros — em todas as suas ações e decisões.'},
-      {q:'Em caso de conflito entre familiares sobre decisões funerárias, qual é a conduta ética correta do profissional?',
-       opts:['Tomar a decisão autonomamente para agilizar o processo','Seguir as instruções do familiar que chegou primeiro','Aguardar consenso familiar ou orientação do responsável legal, documentando tudo e consultando superiores','Recusar o atendimento até que a família resolva o conflito'],ans:2,
-       exp:'Em conflitos familiares, o profissional deve manter postura neutra, aguardar consenso ou definição do responsável legal, documentar todas as situações e, se necessário, envolver a gestão da empresa ou orientação jurídica.'},
-      {q:'A Resolução CFM nº 1.681/2003 regulamenta no setor funerário:',
-       opts:['As condições trabalhistas dos funcionários de funerárias','Os procedimentos de embalsamamento e conservação de corpos, definindo critérios médicos e técnicos','A precificação dos serviços funerários no Brasil','O registro obrigatório de tanatopraxistas no CRM'],ans:1,
-       exp:'A Resolução CFM 1.681/2003 define os critérios médicos e técnicos para os procedimentos de embalsamamento e conservação de corpos, sendo uma das principais normas regulatórias do setor.'},
-      {q:'Qual é a implicação criminal de realizar embalsamamento sem autorização familiar ou legal?',
-       opts:['Nenhuma implicação, pois é prática de saúde pública','Pode configurar intervenção não autorizada em corpo alheio, com possível enquadramento no Art. 212 do CP','Apenas multa administrativa da vigilância sanitária','Suspensão temporária do registro profissional'],ans:1,
-       exp:'Realizar embalsamamento sem consentimento pode configurar intervenção não autorizada, potencialmente enquadrável no Art. 212 do CP (vilipêndio), além de gerar responsabilidade civil. O consentimento documentado é imprescindível.'},
-    ]
-  },
-
-  // ── MÓDULO 9 ──────────────────────────────
-  {
-    num:'09', title:'Documentação Técnica, Logística e Translados',
-    desc:'Declaração de Óbito, Ata de Tanatopraxia, normas ANVISA e ANAC, translados terrestres, aéreos e internacionais.',
-    hours:'4h', questions:[
-      {q:'A Declaração de Óbito (DO) é:',
-       opts:['Documento emitido pela funerária após o velório','Documento médico obrigatório que registra o óbito, preenchido pelo médico assistente ou IML','Certidão emitida pelo Cartório de Registro Civil','Guia de remoção preenchida pela equipe funerária'],ans:1,
-       exp:'A Declaração de Óbito (DO) é o documento médico que registra oficialmente o óbito, preenchido pelo médico assistente que atendeu o paciente, pelo plantonista do hospital ou pelo IML em casos de óbito por causas externas.'},
-      {q:'A "Ata de Tanatopraxia" é um documento técnico que registra:',
-       opts:['O contrato financeiro entre funerária e família','Todos os procedimentos técnicos realizados no corpo: fluidos, pontos de acesso, técnicas, produtos e observações','Apenas a autorização de embalsamamento assinada pela família','O roteiro logístico do translado do corpo'],ans:1,
-       exp:'A Ata de Tanatopraxia é o registro técnico completo do procedimento: data, hora, responsável técnico, pontos de acesso, fluidos e concentrações utilizados, técnicas aplicadas e observações — documento essencial para rastreabilidade.'},
-      {q:'Para o translado aéreo de corpos no Brasil, qual órgão define as normas técnicas obrigatórias?',
-       opts:['ANVISA exclusivamente','ANAC (Agência Nacional de Aviação Civil) em conjunto com as normas sanitárias vigentes','Apenas a companhia aérea responsável pelo voo','Ministério das Relações Exteriores'],ans:1,
-       exp:'A ANAC regula o transporte aéreo de cargas especiais, incluindo corpos humanos. As normas da ANAC definem embalagem, documentação, acondicionamento e requisitos sanitários para o translado aéreo.'},
-      {q:'O embalsamamento é obrigatório para translados aéreos internacionais segundo as normas da ANVISA e ANAC?',
-       opts:['Não, é sempre opcional','Apenas em voos com mais de 2 horas de duração','Sim, é requisito obrigatório para translados internacionais, garantindo a conservação adequada durante o transporte','Somente se o país de destino exigir'],ans:2,
-       exp:'O embalsamamento é obrigatório para translados internacionais, conforme exigência das normas ANVISA/ANAC e dos protocolos internacionais (ICAO). O corpo deve estar devidamente conservado, acondicionado e documentado.'},
-      {q:'Qual documento é especificamente exigido para o translado terrestre interestadual de corpo no Brasil?',
-       opts:['Apenas a Certidão de Óbito','Guia de Translado emitida pelo órgão competente, acompanhada da Certidão de Óbito e documentação técnica','Somente o contrato da funerária','Autorização da Polícia Federal'],ans:1,
-       exp:'O translado terrestre interestadual exige a Guia de Translado emitida pelo órgão sanitário competente (Secretaria de Saúde), além da Certidão de Óbito, documentação técnica do embalsamamento e atestado do responsável.'},
-      {q:'Em casos de óbito de estrangeiro no Brasil, qual procedimento adicional é necessário para o translado internacional?',
-       opts:['Apenas o embalsamamento padrão','Comunicação ao consulado do país de origem, documentação bilíngue e conformidade com as normas do país de destino','Somente autorização da Polícia Federal','Nenhum procedimento adicional além do padrão nacional'],ans:1,
-       exp:'O óbito de estrangeiro requer comunicação ao consulado do país de origem, que coordenará a documentação necessária. A documentação frequentemente precisa estar em língua bilíngue e em conformidade com as normas do país de destino.'},
-      {q:'A Certidão de Óbito é emitida por qual órgão e quando?',
-       opts:['Pela funerária, imediatamente após o óbito','Pelo Cartório de Registro Civil após o registro da Declaração de Óbito médica','Pelo hospital onde ocorreu o óbito','Pelo IML em todos os casos'],ans:1,
-       exp:'A Certidão de Óbito é emitida pelo Cartório de Registro Civil após o registro da Declaração de Óbito (DO) médica. É o documento civil que comprova oficialmente o óbito e habilita os demais procedimentos legais.'},
-      {q:'Qual é o prazo legal máximo para o registro do óbito em cartório no Brasil?',
-       opts:['24 horas após o óbito','48 horas após o óbito','Até 15 dias da data do óbito, prorrogáveis em casos especiais','Não há prazo definido em lei'],ans:2,
-       exp:'A Lei de Registros Públicos (Lei 6.015/73) estabelece o prazo de até 15 dias para registro do óbito em cartório, prorrogável para até 3 meses em casos de localidades distantes de cartório.'},
-      {q:'Para translados aéreos, a urna utilizada deve atender quais requisitos mínimos?',
-       opts:['Qualquer urna de madeira comum fechada com parafusos','Urna com revestimento impermeável (zinco ou similar), lacrada hermeticamente, conforme normas ANAC/ANVISA','Apenas caixão de metal, independente de vedação','Urna de papelão reforçado aprovada pela companhia aérea'],ans:1,
-       exp:'Para translados aéreos, a urna deve ter revestimento impermeável (geralmente zinco soldado) com vedação hermética, pois as variações de pressão e temperatura durante o voo exigem acondicionamento rigoroso para segurança e conformidade sanitária.'},
-      {q:'A Portaria MS nº 2.148/2009 do Ministério da Saúde regulamenta especificamente:',
-       opts:['As técnicas de embalsamamento em território nacional','O transporte inter-estadual e internacional de corpos, definindo requisitos sanitários e documentais','A abertura de funerárias e cemitérios no Brasil','Os equipamentos de proteção em serviços funerários'],ans:1,
-       exp:'A Portaria MS 2.148/2009 regulamenta o transporte inter-estadual e internacional de corpos humanos, definindo os requisitos sanitários, documentação obrigatória e condições de acondicionamento para cada tipo de translado.'},
-    ]
-  },
-
-  // ── MÓDULO 10 ──────────────────────────────
-  {
-    num:'10', title:'Psicologia do Luto e Atendimento Humanizado',
-    desc:'Fases do luto (Kübler-Ross), a importância da última imagem, comunicação empática e prevenção de burnout.',
-    hours:'4h', questions:[
-      {q:'Elisabeth Kübler-Ross descreveu 5 fases do luto. Qual é a ordem correta?',
-       opts:['Aceitação, Negação, Raiva, Barganha, Depressão','Negação, Raiva, Barganha, Depressão, Aceitação','Raiva, Negação, Depressão, Barganha, Aceitação','Depressão, Raiva, Negação, Aceitação, Barganha'],ans:1,
-       exp:'As 5 fases de Kübler-Ross são: 1) Negação, 2) Raiva, 3) Barganha, 4) Depressão, 5) Aceitação. Embora não sejam lineares e nem todos passem por todas elas, representam o processo natural de elaboração do luto.'},
-      {q:'A "importância da última imagem" na tanatopraxia refere-se a:',
-       opts:['A fotografia tirada antes do procedimento de embalsamamento','O impacto duradouro que a aparência do falecido no velório tem no processo de luto dos familiares','O último procedimento técnico antes de fechar o caixão','A imagem digital cadastrada no sistema da funerária'],ans:1,
-       exp:'A última imagem do ente querido tem impacto psicológico profundo e duradouro no luto dos familiares. Uma apresentação digna, pacífica e natural do falecido facilita a despedida e contribui positivamente para o processo de elaboração do luto.'},
-      {q:'Durante o atendimento a uma família em fase de "Negação" (primeira fase de Kübler-Ross), a conduta adequada do profissional é:',
-       opts:['Confrontar a negação diretamente com fatos objetivos','Encaminhar imediatamente a família a um psicólogo','Ser paciente, repetir informações com calma e não forçar decisões rápidas','Ignorar a fase emocional e focar apenas nos aspectos burocráticos'],ans:2,
-       exp:'Na fase de Negação, a família pode rejeitar ou não absorver informações. O profissional deve ser paciente, repetir informações com gentileza quando necessário e evitar pressionar por decisões rápidas, respeitando o tempo emocional da família.'},
-      {q:'O Burnout ocupacional é especialmente prevalente em profissionais do setor funerário porque:',
-       opts:['O setor exige muito esforço físico pesado diariamente','A exposição contínua à morte, ao luto alheio e à pressão operacional gera esgotamento físico e emocional crônico','O setor tem jornadas de trabalho mais longas que qualquer outra área','O uso de formaldeído causa diretamente depressão clínica'],ans:1,
-       exp:'O contato diário com a morte, o sofrimento das famílias, a pressão operacional constante e a responsabilidade emocional do trabalho tornam os profissionais funerários especialmente vulneráveis ao burnout, exigindo cuidado psicológico ativo.'},
-      {q:'A comunicação empática com famílias enlutadas inclui:',
-       opts:['Usar termos técnicos para demonstrar conhecimento e credibilidade','Evitar qualquer contato visual para não constranger a família','Escuta ativa, linguagem acessível, tom de voz calmo e validação das emoções expressas','Apressar o atendimento para diminuir o sofrimento da família'],ans:2,
-       exp:'A comunicação empática exige escuta ativa (genuína e sem interrupções), uso de linguagem simples e acessível, tom de voz suave e pausado, e validação das emoções da família sem minimizar ou exagerar o sofrimento.'},
-      {q:'Qual fase do luto tende a ser o momento mais adequado para orientações práticas sobre documentação e próximos passos?',
-       opts:['Negação','Raiva','Barganha','Aceitação'],ans:3,
-       exp:'Na fase de Aceitação, a família começa a integrar a perda e está mais receptiva a informações práticas sobre documentação, procedimentos e próximas etapas. Nas fases anteriores, informações complexas podem não ser bem absorvidas.'},
-      {q:'A síndrome de burnout em profissionais funerários pode se manifestar através de:',
-       opts:['Apenas sintomas físicos como dores nas costas','Esgotamento emocional, despersonalização (distanciamento emocional do trabalho) e sensação de baixa realização profissional','Apenas insônia e agitação','Somente irritabilidade com colegas de trabalho'],ans:1,
-       exp:'O burnout se manifesta em três dimensões: exaustão emocional (esgotamento), despersonalização (distanciamento e frieza com o trabalho/pessoas) e baixa realização profissional (sensação de ineficácia). Reconhecer esses sinais é essencial.'},
-      {q:'A estratégia de prevenção de burnout mais eficaz para profissionais de tanatopraxia inclui:',
-       opts:['Trabalhar mais horas para se acostumar com a rotina','Suporte psicológico regular, estabelecimento de limites emocionais, pausas efetivas e rede de apoio profissional','Evitar completamente qualquer contato emocional com as famílias','Rotacionar os profissionais semanalmente entre diferentes funções sem planejamento'],ans:1,
-       exp:'A prevenção do burnout exige estratégias ativas: acompanhamento psicológico regular, treinamento em limites emocionais, descanso real nas folgas, hobbies fora do trabalho, supervisão de equipe e cultura organizacional que cuide do colaborador.'},
-      {q:'Durante o atendimento, uma família em fase de "Raiva" começa a criticar agressivamente o serviço sem razão objetiva. A conduta correta do profissional é:',
-       opts:['Responder com firmeza e defender o serviço argumentativamente','Encerrar o atendimento imediatamente por desrespeito','Reconhecer a dor da família, manter postura calma e empática, sem levar para o lado pessoal, e redirecionar para soluções práticas','Chamar a polícia por comportamento inadequado'],ans:2,
-       exp:'A raiva em luto muitas vezes não é direcionada racionalmente — é uma expressão da dor. O profissional deve reconhecer o sofrimento por trás da agressividade, manter equilíbrio emocional, não reagir defensivamente e focar em soluções.'},
-      {q:'Por que a tanatopraxia de qualidade contribui positivamente para o processo de luto familiar?',
-       opts:['Porque acelera o processo burocrático e reduz o tempo de velório','Porque uma apresentação digna e pacífica do falecido facilita a despedida real, favorecendo a elaboração saudável do luto','Porque elimina a necessidade de acompanhamento psicológico posterior','Porque torna o velório um evento mais festivo e menos doloroso'],ans:1,
-       exp:'Uma tanatopraxia bem realizada, que apresenta o falecido de forma digna, pacífica e o mais próxima possível de sua aparência em vida, permite que a família se despeça com uma imagem positiva, o que tem impacto comprovado no processo de elaboração do luto.'},
-    ]
-  },
-];
+    <div id="tela-fim-modulo" class="hidden">
+        <h2>Módulo Concluído!</h2>
+        <p>Você finalizou as questões deste bloco.</p>
+        <div class="botoes-container">
+            <button class="btn btn-outline" onclick="irParaMenu()">Voltar ao Início</button>
 
 // ══════════════════════════════════════════════
 //  ESTADO
