@@ -1,228 +1,1216 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Curso de Tanatopraxia Avançada — DMS | Lista VIP Prof. Davi Moreira</title>
-<meta name="description" content="Garanta sua vaga no curso de Tanatopraxia Avançada do Prof. Davi Moreira. Inscreva-se na Lista VIP e receba prioridade de matrícula, certificação reconhecida e técnicas avançadas de restauração funerária.">
-<meta name="keywords" content="tanatopraxia avançada, curso tanatopraxia, DMS tanatopraxia, Davi Moreira, curso funerário, estética restauração corporal, biossegurança funerária">
+<title>DMS Tanatopraxia – Curso Profissional</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Montserrat:wght@300;400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{background:linear-gradient(135deg,#02111d,#06243d);color:white;padding:20px;}
-.container{max-width:900px;margin:auto;}
-.topo{text-align:center;padding:40px 20px;}
-.logo{font-size:65px;font-weight:bold;color:#d4af37;letter-spacing:10px;text-shadow:3px 3px 10px black;}
-.titulo{font-size:30px;margin-top:15px;font-weight:bold;}
-.sub{margin-top:10px;color:#d0d0d0;font-size:16px;}
-.frase{margin-top:20px;font-size:18px;font-style:italic;color:#d4af37;}
-.badge-vip{display:inline-block;background:#d4af37;color:#111;font-weight:700;padding:6px 20px;border-radius:50px;margin-top:15px;font-size:13px;letter-spacing:2px;}
-.card{background:#0b1f30;padding:30px;border-radius:20px;margin-top:25px;box-shadow:0 0 25px rgba(0,0,0,0.5);border:1px solid rgba(212,175,55,0.2);}
-.card h2{color:#d4af37;margin-bottom:20px;}
-label{display:block;margin-top:15px;margin-bottom:8px;font-weight:bold;font-size:14px;color:rgba(255,255,255,0.8);}
-input,select,textarea{width:100%;padding:15px;border:1px solid transparent;border-radius:12px;background:#122b42;color:white;font-size:15px;outline:none;transition:border-color 0.3s;font-family:inherit;}
-input:focus,select:focus,textarea:focus{border-color:#d4af37;}
-select option{background:#0b1f30;}
-textarea{resize:none;height:110px;}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:15px;}
-@media(max-width:600px){.row{grid-template-columns:1fr;}}
-.radio-group{display:flex;flex-direction:column;gap:10px;margin-top:5px;}
-.opcao{display:flex;align-items:center;gap:12px;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);cursor:pointer;transition:all 0.2s;}
-.opcao input[type=radio]{accent-color:#d4af37;width:18px;height:18px;flex-shrink:0;}
-.opcao:hover{border-color:#d4af37;background:rgba(212,175,55,0.05);}
-.opcao.selected{border-color:#d4af37;background:rgba(212,175,55,0.08);}
-.beneficios{background:rgba(212,175,55,0.06);border:1px solid rgba(212,175,55,0.2);border-radius:14px;padding:20px;margin:20px 0;}
-.beneficios p{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:10px;text-transform:uppercase;letter-spacing:1px;font-weight:700;}
-.item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,0.8);margin-bottom:8px;line-height:1.5;}
-.item::before{content:'✦';color:#d4af37;font-size:11px;margin-top:3px;flex-shrink:0;}
-.btn-group{display:flex;flex-direction:column;gap:12px;margin-top:25px;}
-.btn{width:100%;padding:16px;border:none;border-radius:12px;font-size:16px;font-weight:700;cursor:pointer;transition:0.3s;display:flex;align-items:center;justify-content:center;gap:10px;font-family:inherit;text-decoration:none;}
-.btn:hover{transform:scale(1.02);filter:brightness(1.1);}
-.btn-gold{background:#d4af37;color:#111;}
-.btn-green{background:#25d366;color:white;}
-.btn-outline{background:transparent;border:1px solid #d4af37;color:#d4af37;}
-.divider{text-align:center;font-size:12px;color:rgba(255,255,255,0.25);letter-spacing:2px;margin:4px 0;}
-.error{background:rgba(255,0,0,0.1);border:1px solid rgba(255,0,0,0.3);color:#ff8f8f;padding:12px;border-radius:10px;margin-bottom:15px;display:none;text-align:center;font-size:14px;}
-.success{display:none;text-align:center;padding:60px 20px;background:#0b1f30;border-radius:20px;border:1px solid rgba(212,175,55,0.2);}
-.success h2{color:#d4af37;margin-bottom:12px;font-size:24px;}
-.success p{color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:20px;}
-.success-badge{display:inline-block;background:rgba(212,175,55,0.1);border:1px solid rgba(212,175,55,0.3);border-radius:20px;padding:8px 20px;font-size:13px;color:#d4af37;font-weight:700;}
-.resposta{margin-top:20px;padding:20px;background:#07131f;border-radius:12px;display:none;line-height:1.8;border-left:5px solid #d4af37;font-size:14px;}
-.sugestoes{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;}
-.sug{background:rgba(212,175,55,0.1);border:1px solid rgba(212,175,55,0.3);border-radius:20px;padding:6px 14px;font-size:12px;color:#d4af37;cursor:pointer;transition:0.2s;}
-.sug:hover{background:rgba(212,175,55,0.2);}
-.footer{text-align:center;margin-top:40px;color:#999;font-size:14px;padding-bottom:20px;}
+  :root {
+    --gold: #D4A017;
+    --gold-light: #F5D060;
+    --gold-bright: #FFE066;
+    --gold-dark: #A07810;
+    --blue-deep: #0A1628;
+    --blue-mid: #112240;
+    --blue-accent: #1B3B6F;
+    --blue-bright: #2563EB;
+    --white: #FFFFFF;
+    --off-white: #F8F6EF;
+    --text-light: #C8D6E8;
+    --sidebar-w: 260px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: var(--blue-deep);
+    color: var(--white);
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* ===== SIDEBAR ===== */
+  .sidebar {
+    position: fixed;
+    left: 0; top: 0; bottom: 0;
+    width: var(--sidebar-w);
+    background: linear-gradient(180deg, #060f1e 0%, #0d1f3c 60%, #071020 100%);
+    border-right: 1px solid rgba(212,160,23,0.3);
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    overflow-y: auto;
+  }
+
+  .sidebar-logo-area {
+    padding: 28px 20px 20px;
+    border-bottom: 1px solid rgba(212,160,23,0.2);
+    text-align: center;
+  }
+
+  .sidebar-logo-area .mini-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 1px;
+    line-height: 1.3;
+  }
+
+  .sidebar-logo-area .mini-sub {
+    font-size: 9px;
+    color: rgba(212,160,23,0.6);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .sidebar nav {
+    padding: 20px 0;
+    flex: 1;
+  }
+
+  .nav-section-title {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(212,160,23,0.5);
+    padding: 16px 20px 6px;
+  }
+
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.2s;
+    border-left: 3px solid transparent;
+  }
+
+  .nav-item:hover, .nav-item.active {
+    color: var(--gold-bright);
+    border-left-color: var(--gold);
+    background: rgba(212,160,23,0.07);
+  }
+
+  .nav-item .icon { font-size: 16px; opacity: 0.8; }
+
+  .sidebar-contacts {
+    padding: 16px 14px 24px;
+    border-top: 1px solid rgba(212,160,23,0.15);
+  }
+
+  .contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+  }
+
+  .btn-whatsapp {
+    background: linear-gradient(135deg, #128C7E, #25D366);
+    color: #fff;
+  }
+  .btn-whatsapp:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(37,211,102,0.35); }
+
+  .btn-email {
+    background: linear-gradient(135deg, #1B3B6F, #2563EB);
+    color: #fff;
+  }
+  .btn-email:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(37,99,235,0.35); }
+
+  .btn-instagram {
+    background: linear-gradient(135deg, #833AB4, #E1306C, #F77737);
+    color: #fff;
+  }
+  .btn-instagram:hover { transform: translateY(-1px); box-shadow: 0 4px 14px rgba(225,48,108,0.35); }
+
+  /* ===== MAIN CONTENT ===== */
+  .main {
+    margin-left: var(--sidebar-w);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    background: linear-gradient(135deg, #060f1e 0%, #0d1f3c 40%, #0a1628 100%);
+    text-align: center;
+    padding: 48px 40px 40px;
+    border-bottom: 2px solid rgba(212,160,23,0.3);
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,160,23,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .header-eyebrow {
+    font-size: 11px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 14px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .main-logo {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(38px, 5vw, 68px);
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-bright) 40%, var(--gold) 60%, var(--gold-light) 80%, #fff8c0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 0 24px rgba(212,160,23,0.55)) drop-shadow(0 0 8px rgba(255,224,102,0.35));
+    letter-spacing: 4px;
+    line-height: 1.1;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from { filter: drop-shadow(0 0 18px rgba(212,160,23,0.45)) drop-shadow(0 0 6px rgba(255,224,102,0.25)); }
+    to   { filter: drop-shadow(0 0 36px rgba(212,160,23,0.75)) drop-shadow(0 0 14px rgba(255,224,102,0.55)); }
+  }
+
+  .logo-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    color: rgba(212,160,23,0.7);
+    margin-top: 8px;
+    font-weight: 300;
+  }
+
+  .gold-divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 20px auto;
+  }
+
+  .header-tagline {
+    font-size: 17px;
+    color: var(--text-light);
+    font-weight: 300;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .header-tagline strong {
+    color: var(--gold-light);
+    font-weight: 600;
+  }
+
+  /* ===== MOTIVATIONAL BANNER ===== */
+  .motivational {
+    background: linear-gradient(135deg, #0d1e3c, #1a3560);
+    border-top: 1px solid rgba(212,160,23,0.25);
+    border-bottom: 1px solid rgba(212,160,23,0.25);
+    padding: 20px 40px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .motivational::before {
+    content: '"';
+    position: absolute;
+    left: 32px; top: -10px;
+    font-size: 120px;
+    color: rgba(212,160,23,0.08);
+    font-family: 'Cinzel', serif;
+    line-height: 1;
+  }
+
+  .motivational-ticker {
+    display: flex;
+    gap: 80px;
+    animation: ticker 28s linear infinite;
+    white-space: nowrap;
+  }
+
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .motivational-ticker span {
+    font-style: italic;
+    color: var(--gold-light);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .motivational-ticker .sep {
+    color: var(--gold);
+    font-style: normal;
+    font-size: 18px;
+  }
+
+  /* ===== SECTIONS ===== */
+  .section {
+    padding: 64px 48px;
+  }
+
+  .section-alt {
+    background: rgba(17,34,64,0.45);
+  }
+
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+  }
+
+  .section-subtitle {
+    color: var(--text-light);
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 36px;
+  }
+
+  /* ===== HERO / ABOUT SECTION ===== */
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .hero-text h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-text p {
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 15px;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+
+  .hero-text p strong { color: var(--gold-light); font-weight: 600; }
+
+  .hero-cta {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-bright));
+    color: var(--blue-deep);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 20px rgba(212,160,23,0.35);
+  }
+
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(212,160,23,0.5);
+  }
+
+  .author-card {
+    background: linear-gradient(135deg, #0d1e3c, #112240);
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 12px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .author-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-bright), var(--gold-dark));
+  }
+
+  .author-avatar {
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .author-card h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 18px;
+    color: var(--gold-light);
+    margin-bottom: 6px;
+  }
+
+  .author-card .role {
+    font-size: 12px;
+    color: rgba(212,160,23,0.6);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .author-card p {
+    font-size: 13px;
+    color: var(--text-light);
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* ===== STATS ===== */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .stat-card {
+    background: linear-gradient(135deg, #0d1e3c, #112240);
+    border: 1px solid rgba(212,160,23,0.25);
+    border-radius: 10px;
+    padding: 24px 20px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+
+  .stat-card:hover {
+    border-color: rgba(212,160,23,0.6);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  .stat-card .number {
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1;
+  }
+
+  .stat-card .label {
+    font-size: 12px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 8px;
+    font-weight: 600;
+  }
+
+  /* ===== CURRICULUM ===== */
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .module-card {
+    background: linear-gradient(135deg, #0b1a30, #112240);
+    border: 1px solid rgba(212,160,23,0.2);
+    border-radius: 10px;
+    padding: 22px 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: all 0.2s;
+    cursor: default;
+  }
+
+  .module-card:hover {
+    border-color: rgba(212,160,23,0.5);
+    background: linear-gradient(135deg, #0f2040, #1a3560);
+    transform: translateX(4px);
+  }
+
+  .module-num {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: var(--blue-deep);
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 13px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    min-width: 44px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .module-info h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+  }
+
+  .module-info p {
+    font-size: 12px;
+    color: rgba(200,214,232,0.6);
+  }
+
+  /* ===== MOTIVATIONAL QUOTE SECTION ===== */
+  .quote-section {
+    background: linear-gradient(135deg, #071428, #0d1e3c);
+    padding: 56px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(212,160,23,0.2);
+    border-bottom: 1px solid rgba(212,160,23,0.2);
+  }
+
+  .quote-section::before,
+  .quote-section::after {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(212,160,23,0.08), transparent 70%);
+  }
+  .quote-section::before { left: -80px; top: -80px; }
+  .quote-section::after { right: -80px; bottom: -80px; }
+
+  .quote-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .quote-card {
+    background: rgba(17,34,64,0.6);
+    border: 1px solid rgba(212,160,23,0.2);
+    border-radius: 12px;
+    padding: 28px 24px;
+    position: relative;
+  }
+
+  .quote-card::before {
+    content: '"';
+    position: absolute;
+    top: -16px; left: 16px;
+    font-size: 64px;
+    line-height: 1;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+  }
+
+  .quote-card blockquote {
+    font-style: italic;
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  .quote-card cite {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  /* ===== FOR WHOM ===== */
+  .for-whom-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .whom-card {
+    background: linear-gradient(135deg, #0b1a30, #112240);
+    border: 1px solid rgba(212,160,23,0.2);
+    border-radius: 12px;
+    padding: 28px 22px;
+    text-align: center;
+    transition: all 0.25s;
+  }
+
+  .whom-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 0 24px rgba(212,160,23,0.15);
+    transform: translateY(-4px);
+  }
+
+  .whom-card .icon { font-size: 40px; margin-bottom: 14px; }
+  .whom-card h4 { font-size: 15px; font-weight: 700; color: var(--gold-light); margin-bottom: 10px; }
+  .whom-card p { font-size: 13px; color: var(--text-light); line-height: 1.6; font-weight: 300; }
+
+  /* ===== FORM ===== */
+  .form-container {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .form-card {
+    background: linear-gradient(135deg, #0b1a30, #112240);
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 16px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .form-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold-bright), var(--gold-dark));
+  }
+
+  .form-title {
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+  }
+
+  .form-desc {
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 300;
+    margin-bottom: 28px;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group.full { grid-column: 1 / -1; }
+
+  .form-group label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(212,160,23,0.7);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    background: rgba(10,22,40,0.8);
+    border: 1px solid rgba(212,160,23,0.25);
+    border-radius: 6px;
+    padding: 11px 14px;
+    color: var(--white);
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212,160,23,0.12);
+  }
+
+  .form-group select option { background: #0d1e3c; }
+
+  .form-group textarea { resize: vertical; min-height: 90px; }
+
+  .form-submit {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-bright));
+    color: var(--blue-deep);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 8px;
+    box-shadow: 0 4px 20px rgba(212,160,23,0.3);
+  }
+
+  .form-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(212,160,23,0.5);
+  }
+
+  .form-note {
+    font-size: 11px;
+    color: rgba(200,214,232,0.4);
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: #04090f;
+    border-top: 1px solid rgba(212,160,23,0.3);
+    padding: 36px 48px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+
+  .footer-info {
+    font-size: 12px;
+    color: rgba(200,214,232,0.35);
+    line-height: 1.8;
+  }
+
+  .footer-info a { color: rgba(212,160,23,0.5); text-decoration: none; }
+
+  /* ===== BADGE ===== */
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(212,160,23,0.12);
+    border: 1px solid rgba(212,160,23,0.3);
+    border-radius: 20px;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(212,160,23,0.08), rgba(212,160,23,0.04));
+    border: 1px solid rgba(212,160,23,0.25);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 20px 24px;
+    margin-top: 24px;
+  }
+
+  .highlight-box p {
+    font-size: 14px;
+    color: var(--text-light);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  /* ===== MOBILE TOGGLE ===== */
+  .mobile-toggle {
+    display: none;
+    position: fixed;
+    top: 16px; left: 16px;
+    z-index: 200;
+    background: var(--gold);
+    color: var(--blue-deep);
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    .sidebar { transform: translateX(-100%); transition: transform 0.3s; }
+    .sidebar.open { transform: translateX(0); }
+    .main { margin-left: 0; }
+    .mobile-toggle { display: block; }
+    .hero-grid, .stats-row, .modules-grid, .for-whom-grid, .quote-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .section, header { padding: 40px 24px; }
+    .main-logo { font-size: 28px; letter-spacing: 2px; }
+    header { padding-top: 64px; }
+  }
 </style>
 </head>
 <body>
-<div class="container">
 
-  <div class="topo">
-    <div class="logo">DMS</div>
-    <div class="titulo">Curso de Tanatopraxia Avançada</div>
-    <div class="sub">Pré-inscrição oficial — Lista de Espera VIP</div>
-    <div class="frase">"Quem domina a técnica, transforma respeito em excelência."</div>
-    <div class="badge-vip">✦ LISTA VIP ABERTA ✦</div>
+<button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-logo-area">
+    <div class="mini-logo">DMS<br>TANATOPRAXIA</div>
+    <div class="mini-sub">Curso Profissional</div>
   </div>
 
-  <div id="form-view">
-    <div class="card">
-      <h2>📋 Ficha de Pré-Inscrição VIP</h2>
-      <div class="error" id="erro">⚠️ Por favor, preencha todos os campos obrigatórios.</div>
-      <div class="row">
-        <div><label>Nome completo *</label><input type="text" id="nome" placeholder="Seu nome completo"></div>
-        <div><label>WhatsApp *</label><input type="tel" id="whatsapp" placeholder="(00) 00000-0000"></div>
+  <nav>
+    <div class="nav-section-title">Navegação</div>
+    <a class="nav-item active" href="#inicio"><span class="icon">🏠</span> Início</a>
+    <a class="nav-item" href="#sobre"><span class="icon">📖</span> Sobre o Curso</a>
+    <a class="nav-item" href="#instrutor"><span class="icon">👨‍🏫</span> Instrutor</a>
+    <a class="nav-item" href="#modulos"><span class="icon">📚</span> Módulos</a>
+    <a class="nav-item" href="#para-quem"><span class="icon">🎯</span> Para Quem</a>
+    <a class="nav-item" href="#inscricao"><span class="icon">✍️</span> Pré-Inscrição</a>
+
+    <div class="nav-section-title" style="margin-top:16px;">Contato</div>
+    <a class="nav-item" href="https://wa.me/5533999603507" target="_blank"><span class="icon">💬</span> WhatsApp</a>
+    <a class="nav-item" href="mailto:davi.moreira@dmstanatopraxia.com.br"><span class="icon">📧</span> E-mail</a>
+    <a class="nav-item" href="https://www.instagram.com/dms_cursos_de_tanatopraxia" target="_blank"><span class="icon">📸</span> Instagram</a>
+  </nav>
+
+  <div class="sidebar-contacts">
+    <a class="contact-btn btn-whatsapp" href="https://wa.me/5533999603507" target="_blank">
+      <span>💬</span> (33) 99960-3507
+    </a>
+    <a class="contact-btn btn-email" href="mailto:davi.moreira@dmstanatopraxia.com.br">
+      <span>📧</span> Enviar E-mail
+    </a>
+    <a class="contact-btn btn-instagram" href="https://www.instagram.com/dms_cursos_de_tanatopraxia" target="_blank">
+      <span>📸</span> @dms_cursos
+    </a>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <!-- HEADER -->
+  <header id="inicio">
+    <div class="header-eyebrow">Formação Profissional Especializada</div>
+    <div class="main-logo">DMS TANATOPRAXIA</div>
+    <div class="logo-sub">Curso Completo & Profissional</div>
+    <div class="gold-divider"></div>
+    <p class="header-tagline">
+      Forme-se com <strong>excelência técnica, ética e humanização</strong>.<br>
+      Construa uma carreira sólida no setor funerário com quem vive essa realidade.
+    </p>
+  </header>
+
+  <!-- MOTIVATIONAL TICKER -->
+  <div class="motivational">
+    <div class="motivational-ticker" id="ticker">
+      <span>✦ A dignidade na morte começa com a excelência do profissional</span>
+      <span class="sep">◆</span>
+      <span>✦ Conhecimento transforma vidas — inclusive as que já partiram</span>
+      <span class="sep">◆</span>
+      <span>✦ Cada procedimento é um ato de respeito e compaixão</span>
+      <span class="sep">◆</span>
+      <span>✦ Sua capacitação é o primeiro passo para a excelência</span>
+      <span class="sep">◆</span>
+      <span>✦ A dignidade na morte começa com a excelência do profissional</span>
+      <span class="sep">◆</span>
+      <span>✦ Conhecimento transforma vidas — inclusive as que já partiram</span>
+      <span class="sep">◆</span>
+      <span>✦ Cada procedimento é um ato de respeito e compaixão</span>
+      <span class="sep">◆</span>
+      <span>✦ Sua capacitação é o primeiro passo para a excelência</span>
+    </div>
+  </div>
+
+  <!-- ABOUT / HERO -->
+  <section class="section" id="sobre">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="badge" style="margin-bottom:16px;">Sobre o Curso</div>
+        <h2>Tanatopraxia com Propósito, Técnica e Humanização</h2>
+        <p>O <strong>Curso Completo de Tanatopraxia da DMS</strong> é um programa estruturado que cobre desde a história e evolução da profissão até as técnicas mais avançadas de embalsamamento, reconstituição facial e tanatoestética.</p>
+        <p>Desenvolvido por <strong>Davi Moreira da Silva</strong>, profissional com anos de experiência no setor funerário, o curso prepara você para atuar com <strong>competência, respeito e dignidade</strong> — pilares inegociáveis nessa profissão única.</p>
+        <p>São <strong>10 módulos completos</strong>, biossegurança rigorosa, legislação atualizada e suporte humanizado para cada etapa da sua formação.</p>
+        <a href="#inscricao" class="hero-cta">Quero me Inscrever</a>
+
+        <div class="highlight-box">
+          <p>"Meu propósito é transmitir conhecimento, incentivar boas práticas e colaborar para que cada profissional esteja preparado para exercer sua função com competência, respeito e dignidade." — <strong style="color:var(--gold-light)">Davi Moreira da Silva</strong></p>
+        </div>
       </div>
-      <div class="row">
-        <div><label>E-mail *</label><input type="email" id="email" placeholder="seu@email.com"></div>
-        <div><label>Cidade / Estado *</label><input type="text" id="cidade" placeholder="Ex: Belo Horizonte / MG"></div>
-      </div>
-      <label>Perfil profissional *</label>
-      <div class="radio-group" id="formacao-group">
-        <label class="opcao" onclick="marcar(this,'formacao-group')"><input type="radio" name="formacao" value="Agente funerário"><span>Agente funerário</span></label>
-        <label class="opcao" onclick="marcar(this,'formacao-group')"><input type="radio" name="formacao" value="Tanatopraxista"><span>Tanatopraxista</span></label>
-        <label class="opcao" onclick="marcar(this,'formacao-group')"><input type="radio" name="formacao" value="Profissional da saúde"><span>Profissional da saúde</span></label>
-        <label class="opcao" onclick="marcar(this,'formacao-group')"><input type="radio" name="formacao" value="Quero iniciar na área"><span>Quero iniciar na área</span></label>
-      </div>
-      <label>Objetivo principal *</label>
-      <div class="radio-group" id="objetivo-group">
-        <label class="opcao" onclick="marcar(this,'objetivo-group')"><input type="radio" name="objetivo" value="Obter certificação"><span>Obter certificação</span></label>
-        <label class="opcao" onclick="marcar(this,'objetivo-group')"><input type="radio" name="objetivo" value="Aprender técnicas avançadas"><span>Aprender técnicas avançadas</span></label>
-        <label class="opcao" onclick="marcar(this,'objetivo-group')"><input type="radio" name="objetivo" value="Abrir negócio funerário"><span>Abrir negócio funerário</span></label>
-      </div>
-      <label>Gostaria de levar o curso para sua cidade?</label>
-      <select id="levar">
-        <option value="">Selecione</option>
-        <option>Sim</option>
-        <option>Não</option>
-        <option>Talvez</option>
-      </select>
-      <label>Observações (opcional)</label>
-      <textarea id="obs" placeholder="Alguma dúvida ou informação importante?"></textarea>
-      <div class="beneficios">
-        <p>✦ Benefícios da Lista VIP</p>
-        <div class="item">Prioridade máxima na chamada de vagas</div>
-        <div class="item">Acesso à matrícula 48h antes do público geral</div>
-        <div class="item">Valores e grade curricular em primeira mão</div>
-        <div class="item">Bônus exclusivos de lançamento</div>
-      </div>
-      <p style="text-align:center;font-size:13px;color:rgba(255,255,255,0.4);margin-bottom:8px;">Escolha como enviar sua inscrição:</p>
-      <div class="btn-group">
-        <button class="btn btn-gold" onclick="enviarEmail()">📧 Enviar por E-mail</button>
-        <div class="divider">— ou —</div>
-        <button class="btn btn-green" onclick="enviarWhatsapp()">💬 Enviar pelo WhatsApp</button>
-        <div class="divider">— ou —</div>
-        <button class="btn btn-gold" style="opacity:0.85;" onclick="enviarAmbos()">✦ Enviar pelos Dois</button>
+
+      <div class="author-card" id="instrutor">
+        <div class="author-avatar">👨‍💼</div>
+        <h3>Davi Moreira da Silva</h3>
+        <div class="role">Fundador · DMS Tanatopraxia · CNPJ 66.552.163/0001-95</div>
+        <p>Gerente Operacional de Serviços Funerários e Técnico em Tanatopraxia com especialização avançada em <strong style="color:var(--gold-light)">Tanatopraxia Avançada e Reconstituição Facial</strong>.</p>
+        <p style="margin-top:12px;">Ao longo dos anos, adquiriu experiência prática compartilhada hoje com profissionais de diversas regiões do Brasil, sempre aliando técnica à ética e humanização.</p>
+        <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+          <span class="badge">Especialista em Reconstituição</span>
+          <span class="badge">Biossegurança</span>
+          <span class="badge">Tanatoestética</span>
+        </div>
       </div>
     </div>
-    <button class="btn btn-outline" style="margin-top:12px;" onclick="baixarInscricoes()">📥 Baixar Banco de Dados (.JSON)</button>
-  </div>
 
-  <div class="success" id="success-view">
-    <div style="font-size:52px;margin-bottom:16px;">✦</div>
-    <h2>Cadastro Realizado!</h2>
-    <p>Você entrou para a <strong>Lista VIP DMS Tanatopraxia Avançada</strong>.<br>O Prof. Davi Moreira entrará em contato em breve pelo WhatsApp.</p>
-    <div class="success-badge">✦ Vaga VIP reservada com prioridade</div>
-    <br><br>
-    <a class="btn btn-green" href="https://wa.me/5533999603507" target="_blank" style="max-width:300px;margin:0 auto;">💬 Falar no WhatsApp</a>
-  </div>
-
-  <!-- ROBÔ -->
-  <div class="card" style="margin-top:25px;">
-    <h2>🤖 Robô Inteligente DMS</h2>
-    <label>Faça sua pergunta sobre o curso</label>
-    <textarea id="pergunta" placeholder="Ex: O curso possui certificado? Qual a duração?"></textarea>
-    <div class="sugestoes">
-      <span class="sug" onclick="perguntar(this)">Tem certificado?</span>
-      <span class="sug" onclick="perguntar(this)">Qual a duração?</span>
-      <span class="sug" onclick="perguntar(this)">Como me inscrever?</span>
-      <span class="sug" onclick="perguntar(this)">Qual o valor?</span>
-      <span class="sug" onclick="perguntar(this)">É online ou presencial?</span>
-      <span class="sug" onclick="perguntar(this)">Precisa de experiência?</span>
-      <span class="sug" onclick="perguntar(this)">O que vou aprender?</span>
-      <span class="sug" onclick="perguntar(this)">Quem é o professor?</span>
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="number">10</div>
+        <div class="label">Módulos Completos</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">100+</div>
+        <div class="label">Horas de Conteúdo</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">100%</div>
+        <div class="label">Prático & Teórico</div>
+      </div>
+      <div class="stat-card">
+        <div class="number">∞</div>
+        <div class="label">Suporte Dedicado</div>
+      </div>
     </div>
-    <button class="btn btn-gold" style="margin-top:15px;" onclick="responderIA()">Perguntar Agora</button>
-    <div class="resposta" id="resposta"></div>
+  </section>
+
+  <!-- MOTIVATIONAL QUOTES -->
+  <div class="quote-section">
+    <div class="section-title" style="margin-bottom:8px;">Inspire-se para Crescer</div>
+    <p style="color:var(--text-light);font-size:14px;font-weight:300;margin-bottom:36px;">Palavras que movem profissionais a buscar a excelência</p>
+    <div class="quote-grid">
+      <div class="quote-card">
+        <blockquote>"O respeito à vida começa pelo respeito à morte. Quem cuida do que ficou, cuida também de quem sobreviveu."</blockquote>
+        <cite>— Filosofia da Tanatopraxia</cite>
+      </div>
+      <div class="quote-card">
+        <blockquote>"A técnica sem humanidade é apenas mecânica. A humanidade sem técnica é apenas intenção. O verdadeiro profissional une os dois."</blockquote>
+        <cite>— DMS Tanatopraxia</cite>
+      </div>
+      <div class="quote-card">
+        <blockquote>"Cada formação que transmito é uma semente plantada para que o setor funerário brasileiro cresça com dignidade e excelência."</blockquote>
+        <cite>— Davi Moreira da Silva</cite>
+      </div>
+    </div>
   </div>
 
-  <a class="btn btn-green" href="https://wa.me/5533999603507" target="_blank" style="margin-top:20px;">💬 Suporte Direto no WhatsApp</a>
-  <div class="footer">DMS Tanatopraxia &amp; Gestão Forense © 2026 — Prof. Davi Moreira</div>
-</div>
+  <!-- MODULES -->
+  <section class="section section-alt" id="modulos">
+    <div class="badge" style="margin-bottom:14px;">Grade Curricular</div>
+    <div class="section-title">10 Módulos Estruturados</div>
+    <p class="section-subtitle">Do histórico da profissão às técnicas mais avançadas — uma formação completa e progressiva</p>
+
+    <div class="modules-grid">
+      <div class="module-card">
+        <div class="module-num">M1</div>
+        <div class="module-info">
+          <h4>História e Evolução da Tanatopraxia</h4>
+          <p>8 horas · Das civilizações antigas ao século XXI</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">M2</div>
+        <div class="module-info">
+          <h4>Anatomia e Fisiologia Aplicada</h4>
+          <p>10 horas · Sistema circulatório, topografia vascular, pontos de acesso</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">M3</div>
+        <div class="module-info">
+          <h4>Fenômenos Cadavéricos e Alterações Post-Mortem</h4>
+          <p>8 horas · Diagnóstico, cronotanatognose, decomposição</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">M4</div>
+        <div class="module-info">
+          <h4>Biossegurança e EPI</h4>
+          <p>Normas NR-32, ANVISA RDC 222/2018, proteção individual e coletiva</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">M5</div>
+        <div class="module-info">
+          <h4>Fluidos de Embalsamamento e Química</h4>
+          <p>Formaldeído, soluções, índices, dosimetria e manejo seguro</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">M6</div>
+        <div class="module-info">
+          <h4>Técnica de Embalsamamento Arterial</h4>
+          <p>Injeção, drenagem, canulação, casos especiais e necrópsia</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">M7</div>
+        <div class="module-info">
+          <h4>Tanatoestética e Reconstituição Facial</h4>
+          <p>Maquiagem, restauração, técnicas avançadas de reconstituição</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">M8</div>
+        <div class="module-info">
+          <h4>Legislação e Ética Profissional</h4>
+          <p>ANVISA, CFM, Código Penal, documentação e regulamentação</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">M9</div>
+        <div class="module-info">
+          <h4>Translado e Documentação</h4>
+          <p>Normas ANAC, translado internacional, urnas e logística</p>
+        </div>
+      </div>
+      <div class="module-card">
+        <div class="module-num">M10</div>
+        <div class="module-info">
+          <h4>Atendimento Humanizado e Luto</h4>
+          <p>4 horas · Fases do luto, comunicação empática, saúde mental profissional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOR WHOM -->
+  <section class="section" id="para-quem">
+    <div class="badge" style="margin-bottom:14px;">Público-Alvo</div>
+    <div class="section-title">Este Curso é Para Você?</div>
+    <p class="section-subtitle">Formamos profissionais comprometidos com a excelência e a dignidade humana</p>
+
+    <div class="for-whom-grid">
+      <div class="whom-card">
+        <div class="icon">🎓</div>
+        <h4>Iniciantes na Área</h4>
+        <p>Quem deseja ingressar no setor funerário com uma formação completa, técnica e reconhecida.</p>
+      </div>
+      <div class="whom-card">
+        <div class="icon">🔬</div>
+        <h4>Profissionais da Saúde</h4>
+        <p>Técnicos, auxiliares e profissionais de saúde que buscam ampliar sua atuação para o campo funerário.</p>
+      </div>
+      <div class="whom-card">
+        <div class="icon">🏢</div>
+        <h4>Trabalhadores Funerários</h4>
+        <p>Colaboradores de funerárias que querem se capacitar formalmente e elevar o padrão dos serviços prestados.</p>
+      </div>
+      <div class="whom-card">
+        <div class="icon">📈</div>
+        <h4>Empreendedores do Setor</h4>
+        <p>Donos ou gestores de funerárias que buscam profissionalizar sua equipe e oferecer serviços de mais qualidade.</p>
+      </div>
+      <div class="whom-card">
+        <div class="icon">🌎</div>
+        <h4>Profissionais de Todo Brasil</h4>
+        <p>Nossa metodologia atende profissionais de diversas regiões, com conteúdo baseado na legislação nacional.</p>
+      </div>
+      <div class="whom-card">
+        <div class="icon">💡</div>
+        <h4>Curiosos e Pesquisadores</h4>
+        <p>Quem deseja entender a tanatopraxia do ponto de vista científico, histórico e humanístico.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRE-ENROLLMENT FORM -->
+  <section class="section section-alt" id="inscricao">
+    <div style="text-align:center; margin-bottom:36px;">
+      <div class="badge" style="margin-bottom:14px;">Vagas Limitadas</div>
+      <div class="section-title" style="text-align:center;">Pré-Inscrição Gratuita</div>
+      <p class="section-subtitle" style="text-align:center; max-width:500px; margin:0 auto;">Preencha o formulário e entraremos em contato com todas as informações sobre turmas, valores e condições.</p>
+    </div>
+
+    <div class="form-container">
+      <div class="form-card">
+        <div class="form-title">📋 Formulário de Interesse</div>
+        <p class="form-desc">Campos marcados com * são obrigatórios. Suas informações são tratadas com total confidencialidade.</p>
+
+        <form id="leadForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nome Completo *</label>
+              <input type="text" id="nome" placeholder="Seu nome completo" required>
+            </div>
+            <div class="form-group">
+              <label>WhatsApp *</label>
+              <input type="tel" id="whatsapp" placeholder="(XX) XXXXX-XXXX" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>E-mail *</label>
+              <input type="email" id="email" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label>Cidade / Estado *</label>
+              <input type="text" id="cidade" placeholder="Ex: Belo Horizonte / MG" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Profissão Atual</label>
+              <input type="text" id="profissao" placeholder="Ex: Auxiliar funerário">
+            </div>
+            <div class="form-group">
+              <label>Tem experiência na área?</label>
+              <select id="experiencia">
+                <option value="">Selecione...</option>
+                <option>Nenhuma experiência</option>
+                <option>Menos de 1 ano</option>
+                <option>1 a 3 anos</option>
+                <option>Mais de 3 anos</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label>Como ficou sabendo do curso?</label>
+            <select id="origem">
+              <option value="">Selecione...</option>
+              <option>Instagram</option>
+              <option>WhatsApp / Indicação</option>
+              <option>Google</option>
+              <option>Facebook</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label>Mensagem / Dúvidas</label>
+            <textarea id="mensagem" placeholder="Escreva aqui suas dúvidas, motivação ou informações adicionais..."></textarea>
+          </div>
+
+          <button type="button" class="form-submit" onclick="enviarFormulario()">
+            ✉️ Enviar Pré-Inscrição
+          </button>
+          <p class="form-note">Ao enviar, você será direcionado ao seu aplicativo de e-mail para confirmar o envio. Respondemos em até 24h.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">DMS TANATOPRAXIA</div>
+    <div class="gold-divider"></div>
+    <div class="footer-info">
+      <p><strong style="color:rgba(200,214,232,0.6)">Davi Moreira da Silva</strong> · CNPJ 66.552.163/0001-95</p>
+      <p>📞 <a href="https://wa.me/5533999603507">(33) 99960-3507</a> &nbsp;|&nbsp; 📧 <a href="mailto:davi.moreira@dmstanatopraxia.com.br">davi.moreira@dmstanatopraxia.com.br</a></p>
+      <p>📸 <a href="https://www.instagram.com/dms_cursos_de_tanatopraxia" target="_blank">@dms_cursos_de_tanatopraxia</a></p>
+      <p style="margin-top:14px;">© 2026 DMS Tanatopraxia · Material Didático Exclusivo · Reprodução Proibida sem Autorização Expressa</p>
+    </div>
+  </footer>
+
+</main>
 
 <script>
-function marcar(el, groupId) {
-  document.querySelectorAll('#' + groupId + ' .opcao').forEach(function(o){ o.classList.remove('selected'); });
-  el.classList.add('selected');
-}
-function dados() {
-  return {
-    nome: document.getElementById('nome').value.trim(),
-    whatsapp: document.getElementById('whatsapp').value.trim(),
-    email: document.getElementById('email').value.trim(),
-    cidade: document.getElementById('cidade').value.trim(),
-    formacao: (document.querySelector('input[name="formacao"]:checked') || {}).value || '',
-    objetivo: (document.querySelector('input[name="objetivo"]:checked') || {}).value || '',
-    levar: document.getElementById('levar').value || 'Não informado',
-    obs: document.getElementById('obs').value.trim() || 'Nenhuma',
-    data: new Date().toLocaleString('pt-BR')
-  };
-}
-function validar(d) { return d.nome && d.whatsapp && d.email && d.cidade && d.formacao && d.objetivo; }
-function mostrarErro() { document.getElementById('erro').style.display='block'; window.scrollTo({top:0,behavior:'smooth'}); }
-function salvarLocal(d) { var l=JSON.parse(localStorage.getItem('listaVipDMS')||'[]'); l.push(d); localStorage.setItem('listaVipDMS',JSON.stringify(l)); }
-function mostrarSucesso() { document.getElementById('form-view').style.display='none'; document.getElementById('success-view').style.display='block'; window.scrollTo({top:0,behavior:'smooth'}); }
-function montarCorpo(d) { return encodeURIComponent('Nova inscrição Lista VIP DMS\n\nNome: '+d.nome+'\nWhatsApp: '+d.whatsapp+'\nE-mail: '+d.email+'\nCidade: '+d.cidade+'\nPerfil: '+d.formacao+'\nObjetivo: '+d.objetivo+'\nLevar curso: '+d.levar+'\nObs: '+d.obs+'\nData: '+d.data); }
-function montarWpp(d) { return encodeURIComponent('🏆 *NOVA INSCRIÇÃO — LISTA VIP DMS*\n\n👤 *Nome:* '+d.nome+'\n📱 *WhatsApp:* '+d.whatsapp+'\n✉️ *E-mail:* '+d.email+'\n📍 *Cidade:* '+d.cidade+'\n💼 *Perfil:* '+d.formacao+'\n🎯 *Objetivo:* '+d.objetivo+'\n🏙️ *Levar curso:* '+d.levar+'\n📝 *Obs:* '+d.obs+'\n📅 *Data:* '+d.data); }
-function enviarEmail() { var d=dados(); if(!validar(d)){mostrarErro();return;} document.getElementById('erro').style.display='none'; salvarLocal(d); window.location.href='mailto:dmstanatopraxia.com.br@zohomail.com?subject='+encodeURIComponent('Nova Inscrição VIP DMS — '+d.nome)+'&body='+montarCorpo(d); setTimeout(mostrarSucesso,1500); }
-function enviarWhatsapp() { var d=dados(); if(!validar(d)){mostrarErro();return;} document.getElementById('erro').style.display='none'; salvarLocal(d); window.open('https://wa.me/5533999603507?text='+montarWpp(d),'_blank'); mostrarSucesso(); }
-function enviarAmbos() { var d=dados(); if(!validar(d)){mostrarErro();return;} document.getElementById('erro').style.display='none'; salvarLocal(d); window.location.href='mailto:dmstanatopraxia.com.br@zohomail.com?subject='+encodeURIComponent('Nova Inscrição VIP DMS — '+d.nome)+'&body='+montarCorpo(d); setTimeout(function(){ window.open('https://wa.me/5533999603507?text='+montarWpp(d),'_blank'); mostrarSucesso(); },1500); }
-function baixarInscricoes() { var l=JSON.parse(localStorage.getItem('listaVipDMS')||'[]'); if(!l.length){alert('Nenhuma inscrição salva ainda.');return;} var b=new Blob([JSON.stringify(l,null,2)],{type:'application/json'}); var a=document.createElement('a'); a.href=URL.createObjectURL(b); a.download='inscricoes_lista_vip_dms.json'; a.click(); }
+  // Highlight active nav item on scroll
+  const sections = document.querySelectorAll('section, header');
+  const navItems = document.querySelectorAll('.nav-item');
 
-function perguntar(el) {
-  document.getElementById('pergunta').value = el.textContent;
-  responderIA();
-}
-
-var respostas = [
-  { chaves:['certificado','certifica','diploma','reconhec'], resposta:'✅ <strong>Sim!</strong> O curso de Tanatopraxia Avançada DMS emite certificado de conclusão. O certificado é reconhecido no setor funerário e atesta sua qualificação técnica com o selo DMS & Prof. Davi Moreira.' },
-  { chaves:['duração','duracao','tempo','horas','dias','semanas','meses','quanto tempo'], resposta:'⏱️ A carga horária e duração exata são informadas no momento da abertura das vagas. Para receber essas informações em primeira mão, garanta sua vaga na <strong>Lista VIP</strong> preenchendo a ficha acima!' },
-  { chaves:['valor','preco','preço','custo','investimento','parcela','quanto custa','quanto é'], resposta:'💰 Os valores são liberados exclusivamente para quem está na <strong>Lista VIP</strong> — com condições especiais de lançamento. Preencha a ficha acima ou fale diretamente no WhatsApp: <strong>(33) 99960-3507</strong>.' },
-  { chaves:['online','presencial','ao vivo','gravado','aula','modalidade'], resposta:'🖥️ O curso conta com aulas práticas e teóricas. O formato exato (online, presencial ou híbrido) é definido por turma. Entre na Lista VIP para receber todos os detalhes da próxima turma!' },
-  { chaves:['inscrever','inscrição','inscricao','matricula','matrícula','como faço','como fazer','participar'], resposta:'📋 Para se inscrever, preencha a <strong>Ficha de Pré-Inscrição VIP</strong> aqui nesta página. Ao entrar na lista você garante prioridade máxima e recebe a liberação da matrícula 48h antes do público geral!' },
-  { chaves:['professor','instrutor','davi','moreira','quem ensina','quem ministra'], resposta:'👨‍🏫 O curso é ministrado pelo <strong>Prof. Davi Moreira</strong>, especialista em Tanatopraxia e Gestão Forense, reconhecido pelo alto rigor técnico, foco prático real e total alinhamento com as normas de biossegurança.' },
-  { chaves:['aprender','conteudo','conteúdo','grade','programação','programacao','ementa','modulo','módulo'], resposta:'📚 O curso abrange: <br>✦ Tanatopraxia avançada<br>✦ Estética e restauração corporal<br>✦ Biossegurança e uso de EPIs<br>✦ Gestão forense<br>✦ Tanatologia e humanização<br>✦ Legislação funerária<br><br>Conteúdo completo enviado para quem está na Lista VIP!' },
-  { chaves:['experiência','experiencia','iniciante','começar','comecar','zero','sem experiência'], resposta:'🌱 <strong>Não precisa ter experiência prévia!</strong> O curso é estruturado para atender tanto iniciantes quanto profissionais que desejam se aperfeiçoar. O Prof. Davi Moreira conduz o aprendizado do básico ao avançado.' },
-  { chaves:['vaga','vagas','turma','disponível','disponivel','quando','próxima'], resposta:'🏆 As vagas são <strong>limitadas</strong> e a próxima turma ainda não tem data oficial. Por isso existe a <strong>Lista VIP</strong> — para garantir prioridade cronológica assim que o calendário for liberado. Preencha a ficha agora!' },
-  { chaves:['bonus','bônus','brinde','presente','desconto'], resposta:'🎁 Quem entra pela <strong>Lista VIP</strong> garante acesso aos <strong>bônus exclusivos de lançamento</strong> e condições especiais que não estarão disponíveis para o público geral. Não perca essa oportunidade!' },
-  { chaves:['whatsapp','zap','telefone','contato','falar','ligar'], resposta:'📱 Fale diretamente com nossa equipe pelo WhatsApp: <strong>(33) 99960-3507</strong>. Clique no botão verde abaixo para iniciar o atendimento agora mesmo!' },
-  { chaves:['oi','olá','ola','bom dia','boa tarde','boa noite','tudo bem','tudo bom'], resposta:'👋 Olá! Bem-vindo ao atendimento inteligente da <strong>DMS Tanatopraxia & Gestão Forense</strong>!<br><br>Estou aqui para responder suas dúvidas sobre o curso de Tanatopraxia Avançada com o Prof. Davi Moreira. Como posso te ajudar?' }
-];
-
-function responderIA() {
-  var pergunta = document.getElementById('pergunta').value.trim().toLowerCase();
-  if (!pergunta) { alert('Digite sua pergunta antes de enviar.'); return; }
-  var el = document.getElementById('resposta');
-  el.style.display = 'block';
-  el.innerHTML = '⏳ <em>Processando sua pergunta...</em>';
-
-  setTimeout(function() {
-    var resposta = null;
-    for (var i = 0; i < respostas.length; i++) {
-      for (var j = 0; j < respostas[i].chaves.length; j++) {
-        if (pergunta.indexOf(respostas[i].chaves[j]) !== -1) {
-          resposta = respostas[i].resposta;
-          break;
-        }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navItems.forEach(n => n.classList.remove('active'));
+        const id = entry.target.id;
+        const active = document.querySelector(`.nav-item[href="#${id}"]`);
+        if (active) active.classList.add('active');
       }
-      if (resposta) break;
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => { if (s.id) observer.observe(s); });
+
+  // Close sidebar on mobile after nav click
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', () => {
+      document.querySelector('.sidebar').classList.remove('open');
+    });
+  });
+
+  // Form to email
+  function enviarFormulario() {
+    const nome = document.getElementById('nome').value.trim();
+    const whatsapp = document.getElementById('whatsapp').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const cidade = document.getElementById('cidade').value.trim();
+    const profissao = document.getElementById('profissao').value.trim();
+    const experiencia = document.getElementById('experiencia').value;
+    const origem = document.getElementById('origem').value;
+    const mensagem = document.getElementById('mensagem').value.trim();
+
+    if (!nome || !whatsapp || !email || !cidade) {
+      alert('Por favor, preencha os campos obrigatórios: Nome, WhatsApp, E-mail e Cidade.');
+      return;
     }
-    if (!resposta) {
-      resposta = '🤔 Não encontrei uma resposta específica para essa pergunta. Para informações detalhadas, fale diretamente com nossa equipe:<br><br>📱 <strong>WhatsApp: (33) 99960-3507</strong><br><br>Ou preencha a ficha VIP acima e nossa equipe entrará em contato!';
-    }
-    el.innerHTML = resposta;
-  }, 800);
-}
+
+    const assunto = encodeURIComponent(`PRÉ-INSCRIÇÃO – Curso DMS Tanatopraxia – ${nome}`);
+
+    const corpo = encodeURIComponent(
+`PRÉ-INSCRIÇÃO – CURSO COMPLETO DE TANATOPRAXIA DMS
+═══════════════════════════════════════════════════
+
+DADOS DO INTERESSADO:
+
+Nome Completo:     ${nome}
+WhatsApp:          ${whatsapp}
+E-mail:            ${email}
+Cidade / Estado:   ${cidade}
+Profissão Atual:   ${profissao || 'Não informado'}
+Experiência:       ${experiencia || 'Não informado'}
+Como nos encontrou: ${origem || 'Não informado'}
+
+MENSAGEM / DÚVIDAS:
+${mensagem || 'Nenhuma mensagem adicional.'}
+
+═══════════════════════════════════════════════════
+Enviado via site oficial DMS Tanatopraxia
+`
+    );
+
+    window.location.href = `mailto:davi.moreira@dmstanatopraxia.com.br?subject=${assunto}&body=${corpo}`;
+  }
 </script>
 </body>
 </html>
