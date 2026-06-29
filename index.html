@@ -19,6 +19,7 @@
     --off-white: #F8F6EF;
     --text-light: #C8D6E8;
     --sidebar-w: 260px;
+    --content-max-w: 1200px; /* Definindo uma largura máxima ideal */
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -194,6 +195,21 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    /* Centralizando o conteúdo */
+    align-items: center;
+  }
+
+  /* Container interno para limitar a largura */
+  .content-wrapper {
+    width: 100%;
+    max-width: var(--content-max-w);
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Ajustando elementos que precisam ocupar a largura total do wrapper */
+  header, .motivational, .section, footer {
+    width: 100%;
   }
 
   /* ===== HEADER ===== */
@@ -498,7 +514,6 @@
 
   .module-card {
     background: linear-gradient(135deg, #0b1a30, #112240);
-    border: 1px solid rgba(212,160,23,0.2);
     border-radius: 10px;
     padding: 22px 24px;
     display: flex;
@@ -853,19 +868,19 @@
     <a class="nav-item" href="#inscricao"><span class="icon">✍️</span> Pré-Inscrição</a>
 
     <div class="nav-section-title" style="margin-top:16px;">Contato</div>
-    <a class="nav-item" href="https://wa.me/5533999603507" target="_blank"><span class="icon">💬</span> WhatsApp</a>
+    <a class="nav-item" href="https://api.whatsapp.com/send?phone=5533999603507" target="_blank" rel="noopener noreferrer"><span class="icon">💬</span> WhatsApp</a>
     <a class="nav-item" href="mailto:davi.moreira@dmstanatopraxia.com.br"><span class="icon">📧</span> E-mail</a>
-    <a class="nav-item" href="https://www.instagram.com/dms_cursos_de_tanatopraxia" target="_blank"><span class="icon">📸</span> Instagram</a>
+    <a class="nav-item" href="https://www.instagram.com/dms_cursos_de_tanatopraxia" target="_blank" rel="noopener noreferrer"><span class="icon">📸</span> Instagram</a>
   </nav>
 
   <div class="sidebar-contacts">
-    <a class="contact-btn btn-whatsapp" href="https://wa.me/5533999603507" target="_blank">
+    <a class="contact-btn btn-whatsapp" href="https://api.whatsapp.com/send?phone=5533999603507" target="_blank" rel="noopener noreferrer">
       <span>💬</span> (33) 99960-3507
     </a>
     <a class="contact-btn btn-email" href="mailto:davi.moreira@dmstanatopraxia.com.br">
       <span>📧</span> Enviar E-mail
     </a>
-    <a class="contact-btn btn-instagram" href="https://www.instagram.com/dms_cursos_de_tanatopraxia" target="_blank">
+    <a class="contact-btn btn-instagram" href="https://www.instagram.com/dms_cursos_de_tanatopraxia" target="_blank" rel="noopener noreferrer">
       <span>📸</span> @dms_cursos
     </a>
   </div>
@@ -873,402 +888,312 @@
 
 <!-- MAIN CONTENT -->
 <main class="main">
+  <div class="content-wrapper">
+    <!-- HEADER -->
+    <header id="inicio">
+      <div class="header-eyebrow">Formação Profissional Especializada</div>
+      <div class="main-logo">DMS TANATOPRAXIA</div>
+      <div class="logo-sub">Curso Completo & Profissional</div>
+      <div class="gold-divider"></div>
+      <p class="header-tagline">
+        Forme-se com <strong>excelência técnica, ética e humanização</strong>.<br>
+        Construa uma carreira sólida no setor funerário com quem vive essa realidade.
+      </p>
+    </header>
 
-  <!-- HEADER -->
-  <header id="inicio">
-    <div class="header-eyebrow">Formação Profissional Especializada</div>
-    <div class="main-logo">DMS TANATOPRAXIA</div>
-    <div class="logo-sub">Curso Completo & Profissional</div>
-    <div class="gold-divider"></div>
-    <p class="header-tagline">
-      Forme-se com <strong>excelência técnica, ética e humanização</strong>.<br>
-      Construa uma carreira sólida no setor funerário com quem vive essa realidade.
-    </p>
-  </header>
-
-  <!-- MOTIVATIONAL TICKER -->
-  <div class="motivational">
-    <div class="motivational-ticker" id="ticker">
-      <span>✦ A dignidade na morte começa com a excelência do profissional</span>
-      <span class="sep">◆</span>
-      <span>✦ Conhecimento transforma vidas — inclusive as que já partiram</span>
-      <span class="sep">◆</span>
-      <span>✦ Cada procedimento é um ato de respeito e compaixão</span>
-      <span class="sep">◆</span>
-      <span>✦ Sua capacitação é o primeiro passo para a excelência</span>
-      <span class="sep">◆</span>
-      <span>✦ A dignidade na morte começa com a excelência do profissional</span>
-      <span class="sep">◆</span>
-      <span>✦ Conhecimento transforma vidas — inclusive as que já partiram</span>
-      <span class="sep">◆</span>
-      <span>✦ Cada procedimento é um ato de respeito e compaixão</span>
-      <span class="sep">◆</span>
-      <span>✦ Sua capacitação é o primeiro passo para a excelência</span>
-    </div>
-  </div>
-
-  <!-- ABOUT / HERO -->
-  <section class="section" id="sobre">
-    <div class="hero-grid">
-      <div class="hero-text">
-        <div class="badge" style="margin-bottom:16px;">Sobre o Curso</div>
-        <h2>Tanatopraxia com Propósito, Técnica e Humanização</h2>
-        <p>O <strong>Curso Completo de Tanatopraxia da DMS</strong> é um programa estruturado que cobre desde a história e evolução da profissão até as técnicas mais avançadas de embalsamamento, reconstituição facial e tanatoestética.</p>
-        <p>Desenvolvido por <strong>Davi Moreira da Silva</strong>, profissional com anos de experiência no setor funerário, o curso prepara você para atuar com <strong>competência, respeito e dignidade</strong> — pilares inegociáveis nessa profissão única.</p>
-        <p>São <strong>10 módulos completos</strong>, biossegurança rigorosa, legislação atualizada e suporte humanizado para cada etapa da sua formação.</p>
-        <a href="#inscricao" class="hero-cta">Quero me Inscrever</a>
-
-        <div class="highlight-box">
-          <p>"Meu propósito é transmitir conhecimento, incentivar boas práticas e colaborar para que cada profissional esteja preparado para exercer sua função com competência, respeito e dignidade." — <strong style="color:var(--gold-light)">Davi Moreira da Silva</strong></p>
-        </div>
-      </div>
-
-      <div class="author-card" id="instrutor">
-        <div class="author-avatar">👨‍💼</div>
-        <h3>Davi Moreira da Silva</h3>
-        <div class="role">Fundador · DMS Tanatopraxia · CNPJ 66.552.163/0001-95</div>
-        <p>Gerente Operacional de Serviços Funerários e Técnico em Tanatopraxia com especialização avançada em <strong style="color:var(--gold-light)">Tanatopraxia Avançada e Reconstituição Facial</strong>.</p>
-        <p style="margin-top:12px;">Ao longo dos anos, adquiriu experiência prática compartilhada hoje com profissionais de diversas regiões do Brasil, sempre aliando técnica à ética e humanização.</p>
-        <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
-          <span class="badge">Especialista em Reconstituição</span>
-          <span class="badge">Biossegurança</span>
-          <span class="badge">Tanatoestética</span>
-        </div>
+    <!-- MOTIVATIONAL TICKER -->
+    <div class="motivational">
+      <div class="motivational-ticker" id="ticker">
+        <span>✦ A dignidade na morte começa with a excelência do profissional</span>
+        <span class="sep">◆</span>
+        <span>✦ Conhecimento transforma vidas — inclusive as que já partiram</span>
+        <span class="sep">◆</span>
+        <span>✦ Cada procedimento é um ato de respeito e compaixão</span>
+        <span class="sep">◆</span>
+        <span>✦ Sua capacitação é o primeiro passo para a excelência</span>
+        <span class="sep">◆</span>
+        <span>✦ A dignidade na morte começa com a excelência do profissional</span>
+        <span class="sep">◆</span>
+        <span>✦ Conhecimento transforma vidas — inclusive as que já partiram</span>
+        <span class="sep">◆</span>
+        <span>✦ Cada procedimento é um ato de respeito e compaixão</span>
+        <span class="sep">◆</span>
+        <span>✦ Sua capacitação é o primeiro passo para a excelência</span>
       </div>
     </div>
 
-    <div class="stats-row">
-      <div class="stat-card">
-        <div class="number">10</div>
-        <div class="label">Módulos Completos</div>
-      </div>
-      <div class="stat-card">
-        <div class="number">100+</div>
-        <div class="label">Horas de Conteúdo</div>
-      </div>
-      <div class="stat-card">
-        <div class="number">100%</div>
-        <div class="label">Prático & Teórico</div>
-      </div>
-      <div class="stat-card">
-        <div class="number">∞</div>
-        <div class="label">Suporte Dedicado</div>
-      </div>
-    </div>
-  </section>
+    <!-- ABOUT / HERO -->
+    <section class="section" id="sobre">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="badge" style="margin-bottom:16px;">Sobre o Curso</div>
+          <h2>Tanatopraxia com Propósito, Técnica e Humanização</h2>
+          <p>O <strong>Curso Completo de Tanatopraxia da DMS</strong> é um programa estruturado que cobre desde a história e evolução da profissão até as técnicas mais avançadas de embalsamamento, reconstituição facial e tanatoestética.</p>
+          <p>Desenvolvido por <strong>Davi Moreira da Silva</strong>, profissional com anos de experiência no setor funerário, o curso prepara você para atuar com <strong>competência, respeito e dignidade</strong> — pilares inegociáveis nessa profissão única.</p>
+          <p>São <strong>10 módulos completos</strong>, biossegurança rigorosa, legislação atualizada e suporte humanizado para cada etapa da sua formação.</p>
+          <a href="#inscricao" class="hero-cta">Quero me Inscrever</a>
 
-  <!-- MOTIVATIONAL QUOTES -->
-  <div class="quote-section">
-    <div class="section-title" style="margin-bottom:8px;">Inspire-se para Crescer</div>
-    <p style="color:var(--text-light);font-size:14px;font-weight:300;margin-bottom:36px;">Palavras que movem profissionais a buscar a excelência</p>
-    <div class="quote-grid">
-      <div class="quote-card">
-        <blockquote>"O respeito à vida começa pelo respeito à morte. Quem cuida do que ficou, cuida também de quem sobreviveu."</blockquote>
-        <cite>— Filosofia da Tanatopraxia</cite>
-      </div>
-      <div class="quote-card">
-        <blockquote>"A técnica sem humanidade é apenas mecânica. A humanidade sem técnica é apenas intenção. O verdadeiro profissional une os dois."</blockquote>
-        <cite>— DMS Tanatopraxia</cite>
-      </div>
-      <div class="quote-card">
-        <blockquote>"Cada formação que transmito é uma semente plantada para que o setor funerário brasileiro cresça com dignidade e excelência."</blockquote>
-        <cite>— Davi Moreira da Silva</cite>
-      </div>
-    </div>
-  </div>
-
-  <!-- MODULES -->
-  <section class="section section-alt" id="modulos">
-    <div class="badge" style="margin-bottom:14px;">Grade Curricular</div>
-    <div class="section-title">10 Módulos Estruturados</div>
-    <p class="section-subtitle">Do histórico da profissão às técnicas mais avançadas — uma formação completa e progressiva</p>
-
-    <div class="modules-grid">
-      <div class="module-card">
-        <div class="module-num">M1</div>
-        <div class="module-info">
-          <h4>História e Evolução da Tanatopraxia</h4>
-          <p>8 horas · Das civilizações antigas ao século XXI</p>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-num">M2</div>
-        <div class="module-info">
-          <h4>Anatomia e Fisiologia Aplicada</h4>
-          <p>10 horas · Sistema circulatório, topografia vascular, pontos de acesso</p>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-num">M3</div>
-        <div class="module-info">
-          <h4>Fenômenos Cadavéricos e Alterações Post-Mortem</h4>
-          <p>8 horas · Diagnóstico, cronotanatognose, decomposição</p>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-num">M4</div>
-        <div class="module-info">
-          <h4>Biossegurança e EPI</h4>
-          <p>Normas NR-32, ANVISA RDC 222/2018, proteção individual e coletiva</p>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-num">M5</div>
-        <div class="module-info">
-          <h4>Fluidos de Embalsamamento e Química</h4>
-          <p>Formaldeído, soluções, índices, dosimetria e manejo seguro</p>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-num">M6</div>
-        <div class="module-info">
-          <h4>Técnica de Embalsamamento Arterial</h4>
-          <p>Injeção, drenagem, canulação, casos especiais e necrópsia</p>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-num">M7</div>
-        <div class="module-info">
-          <h4>Tanatoestética e Reconstituição Facial</h4>
-          <p>Maquiagem, restauração, técnicas avançadas de reconstituição</p>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-num">M8</div>
-        <div class="module-info">
-          <h4>Legislação e Ética Profissional</h4>
-          <p>ANVISA, CFM, Código Penal, documentação e regulamentação</p>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-num">M9</div>
-        <div class="module-info">
-          <h4>Translado e Documentação</h4>
-          <p>Normas ANAC, translado internacional, urnas e logística</p>
-        </div>
-      </div>
-      <div class="module-card">
-        <div class="module-num">M10</div>
-        <div class="module-info">
-          <h4>Atendimento Humanizado e Luto</h4>
-          <p>4 horas · Fases do luto, comunicação empática, saúde mental profissional</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOR WHOM -->
-  <section class="section" id="para-quem">
-    <div class="badge" style="margin-bottom:14px;">Público-Alvo</div>
-    <div class="section-title">Este Curso é Para Você?</div>
-    <p class="section-subtitle">Formamos profissionais comprometidos com a excelência e a dignidade humana</p>
-
-    <div class="for-whom-grid">
-      <div class="whom-card">
-        <div class="icon">🎓</div>
-        <h4>Iniciantes na Área</h4>
-        <p>Quem deseja ingressar no setor funerário com uma formação completa, técnica e reconhecida.</p>
-      </div>
-      <div class="whom-card">
-        <div class="icon">🔬</div>
-        <h4>Profissionais da Saúde</h4>
-        <p>Técnicos, auxiliares e profissionais de saúde que buscam ampliar sua atuação para o campo funerário.</p>
-      </div>
-      <div class="whom-card">
-        <div class="icon">🏢</div>
-        <h4>Trabalhadores Funerários</h4>
-        <p>Colaboradores de funerárias que querem se capacitar formalmente e elevar o padrão dos serviços prestados.</p>
-      </div>
-      <div class="whom-card">
-        <div class="icon">📈</div>
-        <h4>Empreendedores do Setor</h4>
-        <p>Donos ou gestores de funerárias que buscam profissionalizar sua equipe e oferecer serviços de mais qualidade.</p>
-      </div>
-      <div class="whom-card">
-        <div class="icon">🌎</div>
-        <h4>Profissionais de Todo Brasil</h4>
-        <p>Nossa metodologia atende profissionais de diversas regiões, com conteúdo baseado na legislação nacional.</p>
-      </div>
-      <div class="whom-card">
-        <div class="icon">💡</div>
-        <h4>Curiosos e Pesquisadores</h4>
-        <p>Quem deseja entender a tanatopraxia do ponto de vista científico, histórico e humanístico.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- PRE-ENROLLMENT FORM -->
-  <section class="section section-alt" id="inscricao">
-    <div style="text-align:center; margin-bottom:36px;">
-      <div class="badge" style="margin-bottom:14px;">Vagas Limitadas</div>
-      <div class="section-title" style="text-align:center;">Pré-Inscrição Gratuita</div>
-      <p class="section-subtitle" style="text-align:center; max-width:500px; margin:0 auto;">Preencha o formulário e entraremos em contato com todas as informações sobre turmas, valores e condições.</p>
-    </div>
-
-    <div class="form-container">
-      <div class="form-card">
-        <div class="form-title">📋 Formulário de Interesse</div>
-        <p class="form-desc">Campos marcados com * são obrigatórios. Suas informações são tratadas com total confidencialidade.</p>
-
-        <form id="leadForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Nome Completo *</label>
-              <input type="text" id="nome" placeholder="Seu nome completo" required>
-            </div>
-            <div class="form-group">
-              <label>WhatsApp *</label>
-              <input type="tel" id="whatsapp" placeholder="(XX) XXXXX-XXXX" required>
-            </div>
+          <div class="highlight-box">
+            <p>"Meu propósito é transmitir conhecimento, incentivar boas práticas e colaborar para que cada profissional esteja preparado para exercer sua função com competência, respeito e dignidade." — <strong style="color:var(--gold-light)">Davi Moreira da Silva</strong></p>
           </div>
+        </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label>E-mail *</label>
-              <input type="email" id="email" placeholder="seu@email.com" required>
-            </div>
-            <div class="form-group">
-              <label>Cidade / Estado *</label>
-              <input type="text" id="cidade" placeholder="Ex: Belo Horizonte / MG" required>
-            </div>
+        <div class="author-card" id="instrutor">
+          <div class="author-avatar">👨‍💼</div>
+          <h3>Davi Moreira da Silva</h3>
+          <div class="role">Fundador · DMS Tanatopraxia · CNPJ 66.552.163/0001-95</div>
+          <p>Gerente Operacional de Serviços Funerários e Técnico em Tanatopraxia com especialização avançada em <strong style="color:var(--gold-light)">Tanatopraxia Avançada e Reconstituição Facial</strong>.</p>
+          <p style="margin-top:12px;">Ao longo dos anos, adquiriu experiência prática compartilhada hoje com profissionais de diversas regiões do Brasil, sempre aliando técnica à ética e humanização.</p>
+          <div style="margin-top:16px; display:flex; gap:8px; flex-wrap:wrap;">
+            <span class="badge">Especialista em Reconstituição</span>
+            <span class="badge">Biossegurança</span>
+            <span class="badge">Tanatoestética</span>
           </div>
+        </div>
+      </div>
 
-          <div class="form-row">
-            <div class="form-group">
-              <label>Profissão Atual</label>
-              <input type="text" id="profissao" placeholder="Ex: Auxiliar funerário">
+      <div class="stats-row">
+        <div class="stat-card">
+          <div class="number">10</div>
+          <div class="label">Módulos Completos</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">100+</div>
+          <div class="label">Horas de Conteúdo</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">100%</div>
+          <div class="label">Ética & Humanização</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">A+</div>
+          <div class="label">Padrão de Qualidade</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULES -->
+    <section class="section section-alt" id="modulos">
+      <div class="section-title">O que você vai aprender</div>
+      <div class="section-subtitle">Conteúdo programático completo dividido em 10 módulos essenciais</div>
+      
+      <div class="modules-grid">
+        <div class="module-card">
+          <div class="module-num">01</div>
+          <div class="module-info">
+            <h4>História e Introdução</h4>
+            <p>A evolução da tanatopraxia e o papel fundamental do profissional no setor funerário moderno.</p>
+          </div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">02</div>
+          <div class="module-info">
+            <h4>Anatomia e Fisiologia</h4>
+            <p>Conhecimento profundo dos sistemas circulatório e esquelético aplicados ao embalsamamento.</p>
+          </div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">03</div>
+          <div class="module-info">
+            <h4>Biossegurança e EPIs</h4>
+            <p>Protocolos rigorosos de segurança, proteção individual e manejo de resíduos biológicos.</p>
+          </div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">04</div>
+          <div class="module-info">
+            <h4>Microbiologia e Patologia</h4>
+            <p>Estudo de doenças, processos de decomposição e riscos biológicos específicos.</p>
+          </div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">05</div>
+          <div class="module-info">
+            <h4>Instrumental e Insumos</h4>
+            <p>Domínio das ferramentas, fluidos arteriais, cavitários e equipamentos de laboratório.</p>
+          </div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">06</div>
+          <div class="module-info">
+            <h4>Técnicas de Injeção</h4>
+            <p>Métodos de acesso vascular, drenagem e distribuição de fluidos para conservação perfeita.</p>
+          </div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">07</div>
+          <div class="module-info">
+            <h4>Tanatoestética</h4>
+            <p>Cosmetologia aplicada, técnicas de maquiagem funerária e apresentação estética digna.</p>
+          </div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">08</div>
+          <div class="module-info">
+            <h4>Reconstituição Facial</h4>
+            <p>Introdução às técnicas de restauração em casos de trauma e recuperação de feições.</p>
+          </div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">09</div>
+          <div class="module-info">
+            <h4>Legislação e Ética</h4>
+            <p>Normas da vigilância sanitária, leis do setor e o código de ética profissional.</p>
+          </div>
+        </div>
+        <div class="module-card">
+          <div class="module-num">10</div>
+          <div class="module-info">
+            <h4>Humanização do Atendimento</h4>
+            <p>Acolhimento às famílias enlutadas e o valor social do serviço de excelência.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTES -->
+    <section class="quote-section">
+      <div class="quote-grid">
+        <div class="quote-card">
+          <blockquote>"A tanatopraxia não é apenas técnica, é a última homenagem que prestamos a quem partiu."</blockquote>
+          <cite>Davi Moreira</cite>
+        </div>
+        <div class="quote-card">
+          <blockquote>"Excelência técnica gera confiança; humanização gera conforto às famílias."</blockquote>
+          <cite>DMS Cursos</cite>
+        </div>
+        <div class="quote-card">
+          <blockquote>"O conhecimento é a ferramenta mais poderosa contra o medo e o preconceito."</blockquote>
+          <cite>Educação Funerária</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOR WHOM -->
+    <section class="section" id="para-quem">
+      <div class="section-title">Para quem é este curso?</div>
+      <div class="section-subtitle">Oportunidades para novos talentos e profissionais experientes</div>
+      
+      <div class="for-whom-grid">
+        <div class="whom-card">
+          <div class="icon">🚀</div>
+          <h4>Iniciantes no Setor</h4>
+          <p>Pessoas que desejam ingressar em uma carreira estável e com alta demanda por mão de obra qualificada.</p>
+        </div>
+        <div class="whom-card">
+          <div class="icon">📈</div>
+          <h4>Profissionais Atuantes</h4>
+          <p>Agentes funerários que buscam especialização técnica para subir de nível e oferecer serviços premium.</p>
+        </div>
+        <div class="whom-card">
+          <div class="icon">🏢</div>
+          <h4>Empresas Funerárias</h4>
+          <p>Gestores que desejam treinar suas equipes com o padrão de qualidade e ética da DMS.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORM -->
+    <section class="section section-alt" id="inscricao">
+      <div class="form-container">
+        <div class="form-card">
+          <h3 class="form-title">Faça sua Pré-Inscrição</h3>
+          <p class="form-desc">Preencha os dados abaixo para receber o cronograma detalhado e informações sobre turmas.</p>
+          
+          <form action="#" method="POST">
+            <div class="form-group full">
+              <label>Nome Completo</label>
+              <input type="text" name="nome" placeholder="Seu nome aqui..." required>
             </div>
-            <div class="form-group">
-              <label>Tem experiência na área?</label>
-              <select id="experiencia">
-                <option value="">Selecione...</option>
-                <option>Nenhuma experiência</option>
-                <option>Menos de 1 ano</option>
-                <option>1 a 3 anos</option>
-                <option>Mais de 3 anos</option>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>WhatsApp</label>
+                <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required>
+              </div>
+              <div class="form-group">
+                <label>Cidade/Estado</label>
+                <input type="text" name="local" placeholder="Ex: Ipatinga/MG" required>
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <label>Já atua no setor?</label>
+              <select name="experiencia">
+                <option value="nao">Não, desejo começar do zero</option>
+                <option value="sim">Sim, já trabalho na área</option>
+                <option value="estudante">Sou estudante/curioso</option>
               </select>
             </div>
-          </div>
 
-          <div class="form-group full">
-            <label>Como ficou sabendo do curso?</label>
-            <select id="origem">
-              <option value="">Selecione...</option>
-              <option>Instagram</option>
-              <option>WhatsApp / Indicação</option>
-              <option>Google</option>
-              <option>Facebook</option>
-              <option>Outro</option>
-            </select>
-          </div>
+            <div class="form-group full">
+              <label>Mensagem ou Dúvida (Opcional)</label>
+              <textarea name="mensagem" placeholder="Como podemos te ajudar?"></textarea>
+            </div>
 
-          <div class="form-group full">
-            <label>Mensagem / Dúvidas</label>
-            <textarea id="mensagem" placeholder="Escreva aqui suas dúvidas, motivação ou informações adicionais..."></textarea>
-          </div>
-
-          <button type="button" class="form-submit" onclick="enviarFormulario()">
-            ✉️ Enviar Pré-Inscrição
-          </button>
-          <p class="form-note">Ao enviar, você será direcionado ao seu aplicativo de e-mail para confirmar o envio. Respondemos em até 24h.</p>
-        </form>
+            <button type="submit" class="form-submit">Enviar Interesse</button>
+            <p class="form-note">Seus dados estão seguros. Entraremos em contato via WhatsApp.</p>
+          </form>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">DMS TANATOPRAXIA</div>
-    <div class="gold-divider"></div>
-    <div class="footer-info">
-      <p><strong style="color:rgba(200,214,232,0.6)">Davi Moreira da Silva</strong> · CNPJ 66.552.163/0001-95</p>
-      <p>📞 <a href="https://wa.me/5533999603507">(33) 99960-3507</a> &nbsp;|&nbsp; 📧 <a href="mailto:davi.moreira@dmstanatopraxia.com.br">davi.moreira@dmstanatopraxia.com.br</a></p>
-      <p>📸 <a href="https://www.instagram.com/dms_cursos_de_tanatopraxia" target="_blank">@dms_cursos_de_tanatopraxia</a></p>
-      <p style="margin-top:14px;">© 2026 DMS Tanatopraxia · Material Didático Exclusivo · Reprodução Proibida sem Autorização Expressa</p>
-    </div>
-  </footer>
-
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">DMS TANATOPRAXIA</div>
+      <div class="footer-info">
+        &copy; 2024 DMS Cursos de Tanatopraxia. Todos os direitos reservados.<br>
+        Davi Moreira da Silva · CNPJ 66.552.163/0001-95<br>
+        Desenvolvido com foco em <a href="#">Excelência & Ética</a>
+      </div>
+    </footer>
+  </div> <!-- Fim do content-wrapper -->
 </main>
 
 <script>
-  // Desktop sidebar toggle
-  const desktopToggle = document.getElementById('desktopToggle');
+  // SIDEBAR TOGGLE LOGIC
   const sidebar = document.querySelector('.sidebar');
-  const mainEl = document.querySelector('.main');
-
+  const main = document.querySelector('.main');
+  const desktopToggle = document.getElementById('desktopToggle');
+  
   desktopToggle.addEventListener('click', () => {
-    const isCollapsed = sidebar.classList.toggle('collapsed');
-    mainEl.classList.toggle('expanded', isCollapsed);
-    desktopToggle.classList.toggle('sidebar-hidden', isCollapsed);
-    desktopToggle.textContent = isCollapsed ? '▶' : '◀';
+    sidebar.classList.toggle('collapsed');
+    main.classList.toggle('expanded');
+    desktopToggle.classList.toggle('sidebar-hidden');
+    
+    if (sidebar.classList.contains('collapsed')) {
+      desktopToggle.innerHTML = '▶';
+    } else {
+      desktopToggle.innerHTML = '◀';
+    }
   });
 
-  // Highlight active nav item on scroll
-  const sections = document.querySelectorAll('section, header');
-  const navItems = document.querySelectorAll('.nav-item');
+  // SMOOTH SCROLL FOR NAV LINKS
+  document.querySelectorAll('.nav-item').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if(href.startsWith('#')) {
+        e.preventDefault();
+        document.querySelector(href).scrollIntoView({
+          behavior: 'smooth'
+        });
+        
+        // Mobile auto-close
+        if(window.innerWidth <= 900) {
+          sidebar.classList.remove('open');
+        }
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navItems.forEach(n => n.classList.remove('active'));
-        const id = entry.target.id;
-        const active = document.querySelector(`.nav-item[href="#${id}"]`);
-        if (active) active.classList.add('active');
+        // Active state
+        document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+        this.classList.add('active');
       }
     });
-  }, { threshold: 0.4 });
-
-  sections.forEach(s => { if (s.id) observer.observe(s); });
-
-  // Close sidebar on mobile after nav click
-  document.querySelectorAll('.nav-item').forEach(item => {
-    item.addEventListener('click', () => {
-      document.querySelector('.sidebar').classList.remove('open');
-    });
   });
 
-  // Form to email
-  function enviarFormulario() {
-    const nome = document.getElementById('nome').value.trim();
-    const whatsapp = document.getElementById('whatsapp').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const cidade = document.getElementById('cidade').value.trim();
-    const profissao = document.getElementById('profissao').value.trim();
-    const experiencia = document.getElementById('experiencia').value;
-    const origem = document.getElementById('origem').value;
-    const mensagem = document.getElementById('mensagem').value.trim();
-
-    if (!nome || !whatsapp || !email || !cidade) {
-      alert('Por favor, preencha os campos obrigatórios: Nome, WhatsApp, E-mail e Cidade.');
-      return;
-    }
-
-    const assunto = encodeURIComponent(`PRÉ-INSCRIÇÃO – Curso DMS Tanatopraxia – ${nome}`);
-
-    const corpo = encodeURIComponent(
-`PRÉ-INSCRIÇÃO – CURSO COMPLETO DE TANATOPRAXIA DMS
-═══════════════════════════════════════════════════
-
-DADOS DO INTERESSADO:
-
-Nome Completo:     ${nome}
-WhatsApp:          ${whatsapp}
-E-mail:            ${email}
-Cidade / Estado:   ${cidade}
-Profissão Atual:   ${profissao || 'Não informado'}
-Experiência:       ${experiencia || 'Não informado'}
-Como nos encontrou: ${origem || 'Não informado'}
-
-MENSAGEM / DÚVIDAS:
-${mensagem || 'Nenhuma mensagem adicional.'}
-
-═══════════════════════════════════════════════════
-Enviado via site oficial DMS Tanatopraxia
-`
-    );
-
-    window.location.href = `mailto:davi.moreira@dmstanatopraxia.com.br?subject=${assunto}&body=${corpo}`;
-  }
+  // TICKER INFINITE REPEAT
+  const ticker = document.getElementById('ticker');
+  ticker.innerHTML += ticker.innerHTML; // Double the content for seamless loop
 </script>
+
 </body>
 </html>
