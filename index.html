@@ -44,6 +44,51 @@
     flex-direction: column;
     z-index: 100;
     overflow-y: auto;
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.collapsed {
+    transform: translateX(-100%);
+  }
+
+  .main {
+    transition: margin-left 0.3s ease;
+  }
+
+  .main.expanded {
+    margin-left: 0 !important;
+  }
+
+  /* ===== DESKTOP TOGGLE BUTTON ===== */
+  .desktop-toggle {
+    position: fixed;
+    top: 50%;
+    left: var(--sidebar-w);
+    transform: translateY(-50%) translateX(0);
+    z-index: 150;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    color: var(--blue-deep);
+    border: none;
+    width: 22px;
+    height: 52px;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.3s ease, background 0.2s;
+    box-shadow: 3px 0 12px rgba(0,0,0,0.4);
+  }
+
+  .desktop-toggle:hover {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    box-shadow: 3px 0 18px rgba(212,160,23,0.4);
+  }
+
+  .desktop-toggle.sidebar-hidden {
+    left: 0;
   }
 
   .sidebar-logo-area {
@@ -789,6 +834,7 @@
 <body>
 
 <button class="mobile-toggle" onclick="document.querySelector('.sidebar').classList.toggle('open')">☰</button>
+<button class="desktop-toggle" id="desktopToggle" title="Mostrar/Esconder menu">◀</button>
 
 <!-- SIDEBAR -->
 <aside class="sidebar">
@@ -1145,6 +1191,18 @@
 </main>
 
 <script>
+  // Desktop sidebar toggle
+  const desktopToggle = document.getElementById('desktopToggle');
+  const sidebar = document.querySelector('.sidebar');
+  const mainEl = document.querySelector('.main');
+
+  desktopToggle.addEventListener('click', () => {
+    const isCollapsed = sidebar.classList.toggle('collapsed');
+    mainEl.classList.toggle('expanded', isCollapsed);
+    desktopToggle.classList.toggle('sidebar-hidden', isCollapsed);
+    desktopToggle.textContent = isCollapsed ? '▶' : '◀';
+  });
+
   // Highlight active nav item on scroll
   const sections = document.querySelectorAll('section, header');
   const navItems = document.querySelectorAll('.nav-item');
