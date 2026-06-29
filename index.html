@@ -19,7 +19,7 @@
     --off-white: #F8F6EF;
     --text-light: #C8D6E8;
     --sidebar-w: 260px;
-    --content-max-w: 1200px; /* Definindo uma largura máxima ideal */
+    --content-max-w: 1200px;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -195,11 +195,9 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* Centralizando o conteúdo */
     align-items: center;
   }
 
-  /* Container interno para limitar a largura */
   .content-wrapper {
     width: 100%;
     max-width: var(--content-max-w);
@@ -207,7 +205,6 @@
     flex-direction: column;
   }
 
-  /* Ajustando elementos que precisam ocupar a largura total do wrapper */
   header, .motivational, .section, footer {
     width: 100%;
   }
@@ -787,7 +784,6 @@
 
   .footer-info a { color: rgba(212,160,23,0.5); text-decoration: none; }
 
-  /* ===== BADGE ===== */
   .badge {
     display: inline-block;
     padding: 4px 10px;
@@ -904,7 +900,7 @@
     <!-- MOTIVATIONAL TICKER -->
     <div class="motivational">
       <div class="motivational-ticker" id="ticker">
-        <span>✦ A dignidade na morte começa with a excelência do profissional</span>
+        <span>✦ A dignidade na morte começa com a excelência do profissional</span>
         <span class="sep">◆</span>
         <span>✦ Conhecimento transforma vidas — inclusive as que já partiram</span>
         <span class="sep">◆</span>
@@ -928,7 +924,7 @@
         <div class="hero-text">
           <div class="badge" style="margin-bottom:16px;">Sobre o Curso</div>
           <h2>Tanatopraxia com Propósito, Técnica e Humanização</h2>
-          <p>O <strong>Curso Completo de Tanatopraxia da DMS</strong> é um programa estruturado que cobre desde a história e evolução da profissão até as técnicas mais avançadas de embalsamamento, reconstituição facial e tanatoestética.</p>
+          <p>O <strong>Curso Completo de Tanatopraxia da DMS</strong> é um programa estruturado que cobre desde a história e evolução da profissão até as técnicas mais avançadas de embalsamamento, reconstitution facial e tanatoestética.</p>
           <p>Desenvolvido por <strong>Davi Moreira da Silva</strong>, profissional com anos de experiência no setor funerário, o curso prepara você para atuar com <strong>competência, respeito e dignidade</strong> — pilares inegociáveis nessa profissão única.</p>
           <p>São <strong>10 módulos completos</strong>, biossegurança rigorosa, legislação atualizada e suporte humanizado para cada etapa da sua formação.</p>
           <a href="#inscricao" class="hero-cta">Quero me Inscrever</a>
@@ -1093,32 +1089,50 @@
       </div>
     </section>
 
-   <script>
-document.getElementById('formWhatsApp').addEventListener('submit', function(event) {
-    event.preventDefault(); // Impede o envio tradicional
+    <!-- FORM -->
+    <section class="section section-alt" id="inscricao">
+      <div class="form-container">
+        <div class="form-card">
+          <h3 class="form-title">Faça sua Pré-Inscrição</h3>
+          <p class="form-desc">Preencha os dados abaixo para receber o cronograma detalhado e informações sobre turmas.</p>
+          
+          <form id="meuFormulario" onsubmit="return false;">
+            <div class="form-group full">
+              <label>Nome Completo</label>
+              <input type="text" name="nome" id="nome" placeholder="Seu nome aqui..." required>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label>WhatsApp</label>
+                <input type="tel" name="whatsapp" id="whatsapp" placeholder="(00) 00000-0000" required>
+              </div>
+              <div class="form-group">
+                <label>Cidade/Estado</label>
+                <input type="text" name="local" id="local" placeholder="Ex: Ipatinga/MG" required>
+              </div>
+            </div>
 
-    // Captura os valores dos campos
-    const nome = document.querySelector('input[name="nome"]').value;
-    const whatsapp = document.querySelector('input[name="whatsapp"]').value;
-    const local = document.querySelector('input[name="local"]').value;
-    const experiencia = document.querySelector('select[name="experiencia"]').value;
-    const mensagem = document.querySelector('textarea[name="mensagem"]').value;
+            <div class="form-group full">
+              <label>Já atua no setor?</label>
+              <select name="experiencia" id="experiencia">
+                <option value="Não, desejo começar do zero">Não, desejo começar do zero</option>
+                <option value="Sim, já trabalho na área">Sim, já trabalho na área</option>
+                <option value="Sou estudante/curioso">Sou estudante/curioso</option>
+              </select>
+            </div>
 
-    // Monta a mensagem
-    const texto = `Olá! Gostaria de fazer minha pré-inscrição.%0A%0A` +
-                  `*Nome:* ${nome}%0A` +
-                  `*WhatsApp:* ${whatsapp}%0A` +
-                  `*Local:* ${local}%0A` +
-                  `*Experiência:* ${experiencia}%0A` +
-                  `*Mensagem:* ${mensagem}`;
+            <div class="form-group full">
+              <label>Mensagem ou Dúvida (Opcional)</label>
+              <textarea name="mensagem" id="mensagem" placeholder="Como podemos te ajudar?"></textarea>
+            </div>
 
-    // Seu número de telefone aqui (em formato internacional)
-    const numero = "5533999603507"; 
-
-    // Abre o WhatsApp
-    window.open(`https://wa.me/${numero}?text=${texto}`, '_blank');
-});
-</script>
+            <button type="submit" class="form-submit" id="btnEnviar">Enviar Interesse</button>
+            <p class="form-note">Seus dados estão seguros. Entraremos em contato via WhatsApp.</p>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -1174,7 +1188,45 @@ document.getElementById('formWhatsApp').addEventListener('submit', function(even
 
   // TICKER INFINITE REPEAT
   const ticker = document.getElementById('ticker');
-  ticker.innerHTML += ticker.innerHTML; // Double the content for seamless loop
+  ticker.innerHTML += ticker.innerHTML;
+
+  // ====================================================
+  //  LÓGICA MANUAL DE ENVIO PARA O SEU E-MAIL (CORRIGIDO)
+  // ====================================================
+  const formulario = document.getElementById('meuFormulario');
+
+  formulario.addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+    // E-mail de destino configurado
+    const emailDestino = "davi.moreira@dmstanatopraxia.com.br";
+    
+    // Coleta dos dados digitados
+    const nome = document.getElementById('nome').value;
+    const whatsapp = document.getElementById('whatsapp').value;
+    const local = document.getElementById('local').value;
+    const experiencia = document.getElementById('experiencia').value;
+    const mensagem = document.getElementById('mensagem').value || "Nenhuma mensagem enviada.";
+
+    // Define o assunto do e-mail
+    const assunto = encodeURIComponent(`Pré-Inscrição: ${nome} - DMS Tanatopraxia`);
+
+    // Monta o corpo do e-mail formatado
+    const corpoEmail = encodeURIComponent(
+      `Nova Ficha de Pré-Inscrição Recebida:\n\n` +
+      `• Nome Completo: ${nome}\n` +
+      `• WhatsApp: ${whatsapp}\n` +
+      `• Cidade/Estado: ${local}\n` +
+      `• Já atua na área? ${experiencia}\n\n` +
+      `• Mensagem/Dúvida:\n${mensagem}`
+    );
+
+    // Comando nativo para disparar a abertura do e-mail
+    window.location.href = `mailto:${emailDestino}?subject=${assunto}&body=${corpoEmail}`;
+    
+    // Limpa o formulário na tela
+    formulario.reset();
+  });
 </script>
 
 </body>
