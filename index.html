@@ -1093,50 +1093,32 @@
       </div>
     </section>
 
-    <!-- FORM -->
-    <section class="section section-alt" id="inscricao">
-      <div class="form-container">
-        <div class="form-card">
-          <h3 class="form-title">Faça sua Pré-Inscrição</h3>
-          <p class="form-desc">Preencha os dados abaixo para receber o cronograma detalhado e informações sobre turmas.</p>
-          
-          <form action="#" method="POST">
-            <div class="form-group full">
-              <label>Nome Completo</label>
-              <input type="text" name="nome" placeholder="Seu nome aqui..." required>
-            </div>
-            
-            <div class="form-row">
-              <div class="form-group">
-                <label>WhatsApp</label>
-                <input type="tel" name="whatsapp" placeholder="(00) 00000-0000" required>
-              </div>
-              <div class="form-group">
-                <label>Cidade/Estado</label>
-                <input type="text" name="local" placeholder="Ex: Ipatinga/MG" required>
-              </div>
-            </div>
+   <script>
+document.getElementById('formWhatsApp').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o envio tradicional
 
-            <div class="form-group full">
-              <label>Já atua no setor?</label>
-              <select name="experiencia">
-                <option value="nao">Não, desejo começar do zero</option>
-                <option value="sim">Sim, já trabalho na área</option>
-                <option value="estudante">Sou estudante/curioso</option>
-              </select>
-            </div>
+    // Captura os valores dos campos
+    const nome = document.querySelector('input[name="nome"]').value;
+    const whatsapp = document.querySelector('input[name="whatsapp"]').value;
+    const local = document.querySelector('input[name="local"]').value;
+    const experiencia = document.querySelector('select[name="experiencia"]').value;
+    const mensagem = document.querySelector('textarea[name="mensagem"]').value;
 
-            <div class="form-group full">
-              <label>Mensagem ou Dúvida (Opcional)</label>
-              <textarea name="mensagem" placeholder="Como podemos te ajudar?"></textarea>
-            </div>
+    // Monta a mensagem
+    const texto = `Olá! Gostaria de fazer minha pré-inscrição.%0A%0A` +
+                  `*Nome:* ${nome}%0A` +
+                  `*WhatsApp:* ${whatsapp}%0A` +
+                  `*Local:* ${local}%0A` +
+                  `*Experiência:* ${experiencia}%0A` +
+                  `*Mensagem:* ${mensagem}`;
 
-           <button type="submit" class="form-submit" id="btnEnviar">Enviar Interesse</button>
-            <p class="form-note">Seus dados estão seguros. Entraremos em contato via WhatsApp.</p>
-          </form>
-        </div>
-      </div>
-    </section>
+    // Seu número de telefone aqui (em formato internacional)
+    const numero = "5533999999999"; 
+
+    // Abre o WhatsApp
+    window.open(`https://wa.me/${numero}?text=${texto}`, '_blank');
+});
+</script>
 
     <!-- FOOTER -->
     <footer>
